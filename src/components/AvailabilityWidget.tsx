@@ -1,14 +1,20 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import type { FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import DatePicker from "./DatePicker";
+
+const MAX_GUESTS = 15;
 
 export default function AvailabilityWidget() {
   const router = useRouter();
+  const [guests, setGuests] = useState(2);
+  const guestsError = guests > MAX_GUESTS;
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (guestsError) return;
+
     const data = new FormData(e.currentTarget);
     const params = new URLSearchParams();
     params.set("service", "hebergement");
@@ -16,7 +22,7 @@ export default function AvailabilityWidget() {
     const checkin = String(data.get("checkin") ?? "");
     const checkout = String(data.get("checkout") ?? "");
     if (checkin && checkout) params.set("dates", `${checkin} au ${checkout}`);
-    params.set("guests", String(data.get("guests") ?? ""));
+    params.set("guests", String(guests));
 
     router.push(`/contact?${params.toString()}`);
   }
@@ -30,45 +36,40 @@ export default function AvailabilityWidget() {
         >
           <DatePicker label="Arrivée" name="checkin" />
           <DatePicker label="Départ" name="checkout" />
-          <Field label="Voyageurs" name="guests" type="number" min={1} defaultValue={2} />
+          <div>
+            <label className="block text-left">
+              <span className="mb-1 block text-xs font-semibold uppercase tracking-wide text-ink-400">
+                Voyageurs
+              </span>
+              <input
+                name="guests"
+                type="number"
+                min={1}
+                max={MAX_GUESTS}
+                value={guests}
+                onChange={(e) => setGuests(Number(e.target.value))}
+                aria-invalid={guestsError}
+                className={`w-full rounded-xl border bg-sand-50 px-3.5 py-2.5 text-sm text-ink-900 outline-none transition focus:ring-1 ${
+                  guestsError
+                    ? "border-red-400 focus:border-red-500 focus:ring-red-500"
+                    : "border-ink-100 focus:border-clay-500 focus:ring-clay-500"
+                }`}
+              />
+            </label>
+            {guestsError && (
+              <p className="mt-1 text-xs font-medium text-red-600">Maximum 15 personnes</p>
+            )}
+          </div>
 
           <button
             type="submit"
-            className="rounded-xl bg-ink-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-clay-600"
+            className="rounded-xl bg-ink-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-clay-600 disabled:cursor-not-allowed disabled:opacity-50"
+            disabled={guestsError}
           >
             Vérifier la disponibilité
           </button>
         </form>
       </div>
     </div>
-  );
-}
-
-function Field({
-  label,
-  name,
-  type,
-  min,
-  defaultValue,
-}: {
-  label: string;
-  name: string;
-  type: "number";
-  min?: number;
-  defaultValue?: number;
-}) {
-  return (
-    <label className="block text-left">
-      <span className="mb-1 block text-xs font-semibold uppercase tracking-wide text-ink-400">
-        {label}
-      </span>
-      <input
-        name={name}
-        type={type}
-        min={min}
-        defaultValue={defaultValue}
-        className="w-full rounded-xl border border-ink-100 bg-sand-50 px-3.5 py-2.5 text-sm text-ink-900 outline-none transition focus:border-clay-500 focus:ring-1 focus:ring-clay-500"
-      />
-    </label>
   );
 }

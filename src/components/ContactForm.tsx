@@ -2,7 +2,6 @@
 
 import { useSearchParams } from "next/navigation";
 import { useState, type FormEvent } from "react";
-import { siteConfig } from "@/lib/site-config";
 
 const serviceOptions = [
   "Riad",
@@ -20,12 +19,13 @@ export default function ContactForm() {
   const searchParams = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [sending, setSending] = useState(false);
 
   const prefilledService = serviceParamMap[searchParams.get("service") ?? ""] ?? serviceOptions[0];
   const prefilledDates = searchParams.get("dates") ?? "";
   const prefilledGuests = searchParams.get("guests");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -38,24 +38,34 @@ export default function ContactForm() {
       return;
     }
     setError("");
+    setSending(true);
 
-    const subject = `Demande de réservation — ${data.get("service")}`;
-    const body = [
-      `Nom : ${name}`,
-      `Email : ${email}`,
-      `Téléphone : ${data.get("phone") ?? "-"}`,
-      `Service souhaité : ${data.get("service")}`,
-      `Dates envisagées : ${data.get("dates") ?? "-"}`,
-      "",
-      message,
-    ].join("\n");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          phone: data.get("phone"),
+          service: data.get("service"),
+          dates: data.get("dates"),
+          message,
+        }),
+      });
 
-    window.location.href = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+      if (!res.ok) {
+        const result = await res.json().catch(() => null);
+        throw new Error(result?.error ?? "Une erreur est survenue.");
+      }
 
-    setSubmitted(true);
-    form.reset();
+      setSubmitted(true);
+      form.reset();
+    } catch {
+      setError("L'envoi a échoué. Merci de réessayer ou de nous écrire sur WhatsApp.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -153,16 +163,17 @@ export default function ContactForm() {
       {error && <p className="text-sm text-red-600">{error}</p>}
       {submitted && (
         <p className="rounded-xl bg-palm-500/10 px-4 py-3 text-sm text-palm-700">
-          Merci ! Votre client de messagerie va s&apos;ouvrir pour envoyer votre demande.
+          Merci ! Votre demande a bien été envoyée, notre équipe vous répond sous 24h.
           Vous pouvez aussi nous écrire directement sur WhatsApp pour une réponse plus rapide.
         </p>
       )}
 
       <button
         type="submit"
-        className="w-full rounded-full bg-ink-950 px-7 py-3.5 text-sm font-semibold text-sand-50 transition hover:bg-clay-600 sm:w-auto"
+        disabled={sending}
+        className="w-full rounded-full bg-ink-950 px-7 py-3.5 text-sm font-semibold text-sand-50 transition hover:bg-clay-600 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
-        Envoyer la demande
+        {sending ? "Envoi en cours..." : "Envoyer la demande"}
       </button>
     </form>
   );
