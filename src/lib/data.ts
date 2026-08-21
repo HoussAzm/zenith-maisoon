@@ -245,7 +245,8 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     text: "Réservation simple, communication rapide en anglais. Le riad était d'un raffinement incroyable, je recommande sans hésiter.",
     service: "Riad Jasmin",
-    platform: "google",
+    platform: "agoda",
+    score: 9.0,
   },
   {
     name: "Julien Moreau",
@@ -271,6 +272,7 @@ export const testimonials: Testimonial[] = [
     text: "La villa était un havre de paix : sauna, massage, piscine chauffée toute la semaine. Exactement la coupure dont nous avions besoin.",
     service: "Villa Palmeraie Dune",
     platform: "agoda",
+    score: 9.4,
   },
   {
     name: "David & Rachel Cohen",
@@ -286,7 +288,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     text: "Nous étions 14 pour un anniversaire en famille : le Palais Riyad El Fassia a géré l'hébergement, les repas et même les activités sur place. Un professionnalisme remarquable du début à la fin.",
     service: "Palais Riyad El Fassia",
-    platform: "google",
+    platform: "airbnb",
   },
   {
     name: "Ahmed Ben Youssef",
@@ -304,6 +306,7 @@ export const testimonials: Testimonial[] = [
     text: "Séjour entre amies très réussi à la Villa Atlas View. La vue sur l'Atlas au petit-déjeuner restera un souvenir marquant. Petit bémol sur le wifi, vite résolu par l'équipe sur place.",
     service: "Villa Atlas View",
     platform: "agoda",
+    score: 8.4,
   },
 ];
 

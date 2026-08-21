@@ -19,7 +19,7 @@ export interface Property {
   images: string[];
 }
 
-export type ReviewPlatform = "airbnb" | "booking" | "agoda" | "google";
+export type ReviewPlatform = "airbnb" | "booking" | "agoda";
 
 export interface Testimonial {
   name: string;

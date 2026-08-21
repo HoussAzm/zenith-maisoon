@@ -1,6 +1,7 @@
 import type { Testimonial } from "@/types";
 import PlatformBadge from "./PlatformBadge";
 import BookingScore from "./BookingScore";
+import AgodaScore from "./AgodaScore";
 
 function initials(name: string) {
   return name
@@ -17,6 +18,8 @@ export default function TestimonialCard({ testimonial }: { testimonial: Testimon
       <div className="flex items-center justify-between gap-2">
         {testimonial.platform === "booking" && testimonial.score !== undefined ? (
           <BookingScore score={testimonial.score} />
+        ) : testimonial.platform === "agoda" && testimonial.score !== undefined ? (
+          <AgodaScore score={testimonial.score} />
         ) : (
           <div className="flex items-center gap-1 text-gold-500">
             {Array.from({ length: 5 }).map((_, i) => (

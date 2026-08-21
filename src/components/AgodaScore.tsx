@@ -1,9 +1,9 @@
 import { formatReviewScore, reviewScoreLabel } from "@/lib/reviewScore";
 
-export default function BookingScore({ score }: { score: number }) {
+export default function AgodaScore({ score }: { score: number }) {
   return (
     <div className="flex items-center gap-2.5">
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-[#003580] text-sm font-bold text-white">
+      <span className="text-2xl font-bold leading-none text-[#1565C0]">
         {formatReviewScore(score)}
       </span>
       <div className="leading-tight">
