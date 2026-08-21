@@ -19,12 +19,17 @@ export interface Property {
   images: string[];
 }
 
+export type ReviewPlatform = "airbnb" | "booking" | "agoda" | "google";
+
 export interface Testimonial {
   name: string;
   origin: string;
   rating: number;
   text: string;
   service: string;
+  platform: ReviewPlatform;
+  /** Booking.com-style score out of 10 (e.g. 9.6). Only used when platform is "booking". */
+  score?: number;
 }
 
 export interface FAQ {

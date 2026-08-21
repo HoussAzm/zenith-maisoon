@@ -228,6 +228,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     text: "Un séjour absolument parfait au Riad Al Manar. L'équipe a organisé notre transfert et chaque détail de notre séjour. Tout était fluide du début à la fin.",
     service: "Riad Al Manar",
+    platform: "airbnb",
   },
   {
     name: "Marco Bellini",
@@ -235,6 +236,8 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     text: "La Villa Atlas View dépasse toutes les photos. Piscine magnifique, personnel aux petits soins : un des meilleurs souvenirs de notre voyage au Maroc.",
     service: "Villa Atlas View",
+    platform: "booking",
+    score: 9.6,
   },
   {
     name: "Sarah Al-Farsi",
@@ -242,6 +245,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     text: "Réservation simple, communication rapide en anglais. Le riad était d'un raffinement incroyable, je recommande sans hésiter.",
     service: "Riad Jasmin",
+    platform: "google",
   },
   {
     name: "Julien Moreau",
@@ -249,6 +253,7 @@ export const testimonials: Testimonial[] = [
     rating: 4,
     text: "Excellent rapport qualité-prix pour l'appartement à Guéliz, très bien situé, idéal pour découvrir Marrakech en famille.",
     service: "Appartement Guéliz Loft",
+    platform: "airbnb",
   },
   {
     name: "Amira & Karim Haddad",
@@ -256,6 +261,8 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     text: "Un niveau de service digne des plus grands palaces. Le majordome et le chef privé ont rendu notre réunion de famille inoubliable, chaque détail était pensé.",
     service: "Palais Riyad El Fassia",
+    platform: "booking",
+    score: 10,
   },
   {
     name: "Laura Bianchi",
@@ -263,6 +270,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     text: "La villa était un havre de paix : sauna, massage, piscine chauffée toute la semaine. Exactement la coupure dont nous avions besoin.",
     service: "Villa Palmeraie Dune",
+    platform: "agoda",
   },
   {
     name: "David & Rachel Cohen",
@@ -270,6 +278,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     text: "Suite lumineuse, ultra bien placée à deux pas de la Koutoubia. Communication impeccable avant et pendant le séjour, on recommande sans hésiter.",
     service: "Appartement Médina Suite",
+    platform: "airbnb",
   },
   {
     name: "Sophie Lambert",
@@ -277,6 +286,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     text: "Nous étions 14 pour un anniversaire en famille : le Palais Riyad El Fassia a géré l'hébergement, les repas et même les activités sur place. Un professionnalisme remarquable du début à la fin.",
     service: "Palais Riyad El Fassia",
+    platform: "google",
   },
   {
     name: "Ahmed Ben Youssef",
@@ -284,6 +294,8 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     text: "En déplacement professionnel régulier à Marrakech, j'apprécie la réactivité de l'équipe et la constance du service à chaque séjour à l'appartement de Guéliz.",
     service: "Appartement Guéliz Loft",
+    platform: "booking",
+    score: 9.4,
   },
   {
     name: "Isabella Rossi",
@@ -291,6 +303,7 @@ export const testimonials: Testimonial[] = [
     rating: 4,
     text: "Séjour entre amies très réussi à la Villa Atlas View. La vue sur l'Atlas au petit-déjeuner restera un souvenir marquant. Petit bémol sur le wifi, vite résolu par l'équipe sur place.",
     service: "Villa Atlas View",
+    platform: "agoda",
   },
 ];
 
