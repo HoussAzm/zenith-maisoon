@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
 import StatsBar from "@/components/StatsBar";
@@ -6,64 +7,60 @@ import ImageWithFallback from "@/components/ImageWithFallback";
 import CTASection from "@/components/CTASection";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = {
-  title: "À propos",
-  description:
-    "Découvrez l'agence Zénith Maison, spécialiste de la location de palais, riads, villas et appartements à Marrakech.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "aboutPage" });
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+  };
+}
 
-const values = [
-  {
-    title: "Authenticité",
-    text: "Des hébergements sélectionnés pour leur caractère et leur emplacement, entre médina traditionnelle et Marrakech contemporaine.",
-  },
-  {
-    title: "Exigence",
-    text: "Chaque palais, riad, villa et appartement est vérifié personnellement par notre équipe avant d'intégrer notre catalogue.",
-  },
-  {
-    title: "Disponibilité",
-    text: "Une équipe locale joignable 7j/7 pour répondre à vos besoins avant et pendant votre séjour.",
-  },
-];
+export default async function AProposPage() {
+  const t = await getTranslations("aboutPage");
 
-export default function AProposPage() {
+  const values = [
+    { title: t("values.authenticity.title"), text: t("values.authenticity.text") },
+    { title: t("values.rigor.title"), text: t("values.rigor.text") },
+    { title: t("values.availability.title"), text: t("values.availability.text") },
+  ];
+
   return (
     <>
       <Hero
         compact
-        eyebrow="Notre agence"
-        title="Une équipe locale au service de votre séjour"
-        description="Depuis Marrakech, nous concevons des séjours sur mesure dans des hébergements d'exception, du palais royal à l'appartement contemporain."
+        eyebrow={t("hero.eyebrow")}
+        title={t("hero.title")}
+        description={t("hero.description")}
         image="/images/hero/hero-about.jpg"
-        imageLabel="Équipe Zénith Maison à Marrakech"
+        imageLabel={t("hero.imageLabel")}
       />
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div>
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-clay-500">
-              Notre histoire
+              {t("story.eyebrow")}
             </span>
             <h2 className="mt-3 font-display text-3xl text-ink-900 sm:text-4xl">
-              Faire découvrir le vrai Marrakech, sans le stress logistique
+              {t("story.title")}
             </h2>
             <p className="mt-5 text-sm leading-relaxed text-ink-600">
-              {siteConfig.name} est né d&apos;un constat simple : trouver un hébergement de
-              standing à Marrakech, avec un vrai suivi et un interlocuteur unique du début
-              à la fin du séjour, relève souvent du parcours du combattant. Notre agence
-              résout ce problème avec une exigence de qualité constante.
+              {t("story.paragraph1", { siteName: siteConfig.name })}
             </p>
             <p className="mt-4 text-sm leading-relaxed text-ink-600">
-              Notre équipe, basée à Marrakech, sélectionne personnellement chaque palais,
-              chaque riad, chaque villa et chaque appartement de notre catalogue.
+              {t("story.paragraph2")}
             </p>
           </div>
           <div className="relative h-96 w-full overflow-hidden rounded-2xl">
             <ImageWithFallback
               src="/images/hero/about-team.jpg"
-              alt="Équipe locale à Marrakech"
-              label="Équipe locale à Marrakech"
+              alt={t("story.imageLabel")}
+              label={t("story.imageLabel")}
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
@@ -79,7 +76,7 @@ export default function AProposPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
-        <SectionHeading eyebrow="Nos valeurs" title="Ce qui guide notre travail" />
+        <SectionHeading eyebrow={t("values.eyebrow")} title={t("values.title")} />
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {values.map((v) => (
             <div key={v.title} className="rounded-2xl border border-ink-100 bg-white p-7">

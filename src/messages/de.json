@@ -1,0 +1,501 @@
+{
+  "metadata": {
+    "tagline": "Prestigeträchtige Paläste, Riads & Villen in Marrakesch",
+    "description": "Vermietungsagentur in Marrakesch: exklusive Paläste, Riads, Villen und Apartments mit persönlichem Concierge-Service.",
+    "ogDescription": "Exklusive Paläste, Riads, Villen und Apartments in Marrakesch.",
+    "keywords": [
+      "Palast Marrakesch",
+      "Riad Marrakesch",
+      "Villa Marrakesch",
+      "Apartment Marrakesch",
+      "Riad mieten Marrakesch"
+    ]
+  },
+  "nav": {
+    "home": "Startseite",
+    "accommodations": "Unterkünfte",
+    "gallery": "Galerie",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "bookNow": "Jetzt buchen",
+    "openMenu": "Menü öffnen",
+    "language": "Sprache"
+  },
+  "footer": {
+    "tagline": "Ihre vertrauenswürdige Agentur in Marrakesch für die Vermietung exklusiver Paläste, Riads, Villen und Apartments, mit persönlichem Concierge- und Serviceangebot.",
+    "accommodationsTitle": "Unsere Unterkünfte",
+    "accommodationsLink": "Paläste, Riads, Villen & Apartments",
+    "galleryLink": "Fotogalerie",
+    "aboutTitle": "Über uns",
+    "agencyLink": "Unsere Agentur",
+    "contactLink": "Kontakt",
+    "faqLink": "Häufig gestellte Fragen",
+    "contactTitle": "Kontakt",
+    "rightsReserved": "Alle Rechte vorbehalten.",
+    "location": "Marrakesch, Marokko"
+  },
+  "common": {
+    "whatsappGeneral": "Hallo, ich hätte gerne weitere Informationen.",
+    "whatsappServices": "Hallo, ich hätte gerne weitere Informationen zu Ihren Leistungen.",
+    "whatsappStay": "Hallo, ich möchte meinen Aufenthalt in Marrakesch organisieren.",
+    "perNight": "/ Nacht",
+    "viewDetail": "Details ansehen →",
+    "discover": "Entdecken →",
+    "guestsShort": "Pers.",
+    "bedroomsShort": "Schlafzimmer",
+    "bathroomsShort": "Bäder",
+    "featured": "Favorit",
+    "reviews": "Bewertungen",
+    "hours": "7 Tage die Woche erreichbar — 8 bis 22 Uhr"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Marrakesch, Marokko",
+      "title": "Ihr Prestige-Aufenthalt in Marrakesch, ohne Kompromisse",
+      "description": "Außergewöhnliche Paläste, Riads und Villen im Herzen von Marrakesch — eine einzige Agentur für die Organisation Ihres gesamten Aufenthalts.",
+      "imageLabel": "Traditioneller Riad-Innenhof in Marrakesch",
+      "primaryCta": "Unsere Unterkünfte entdecken",
+      "secondaryCta": "Angebot anfordern"
+    },
+    "categories": {
+      "eyebrow": "Unsere Kategorien",
+      "title": "Finden Sie Ihre ideale Unterkunftsart",
+      "description": "Vom königlichen Palast bis zum modernen Apartment — eine Auswahl für jeden Aufenthaltsstil in Marrakesch."
+    },
+    "featured": {
+      "eyebrow": "Unterkünfte",
+      "title": "Unsere Lieblingsadressen",
+      "description": "Eine Auswahl an Palästen, Riads, Villen und Apartments, ausgewählt nach Lage, Komfort und Service.",
+      "viewAll": "Alle Unterkünfte ansehen"
+    },
+    "why": {
+      "eyebrow": "Warum uns wählen",
+      "title": "Ein einziger Ansprechpartner, keine Komplikationen",
+      "description": "Vergleichen Sie, was Sie mit {siteName} gegenüber einer Eigenbuchung oder einem klassischen Hotel gewinnen."
+    },
+    "testimonials": {
+      "eyebrow": "Erfahrungsberichte",
+      "title": "Was unsere Gäste sagen",
+      "description": "Sorgfältig organisierte Aufenthalte, vom ersten Kontakt bis zum letzten Tag."
+    },
+    "faq": {
+      "eyebrow": "Häufig gestellte Fragen",
+      "title": "Alles, was Sie wissen müssen"
+    }
+  },
+  "accommodationsPage": {
+    "metaTitle": "Riads, Villen & Apartments in Marrakesch",
+    "metaDescription": "Entdecken Sie unsere Auswahl an exklusiven Riads, Villen und Apartments zur Miete in Marrakesch, mit Pool, Concierge und erstklassigem Service.",
+    "hero": {
+      "eyebrow": "Unterkünfte",
+      "title": "Riads, Villen & Apartments",
+      "description": "Eine exklusive Auswahl an Adressen in Marrakesch, von der traditionellen Medina bis zu den zeitgenössischen Villen der Palmeraie.",
+      "imageLabel": "Villenpool in Marrakesch"
+    },
+    "section": {
+      "eyebrow": "Unsere Adressen",
+      "title": "Wählen Sie Ihren idealen Aufenthalt",
+      "description": "Filtern Sie nach Unterkunftsart, um das Riad, die Villa oder das Apartment zu finden, das zu Ihrem Aufenthalt passt."
+    },
+    "filters": {
+      "all": "Alle",
+      "palais": "Paläste",
+      "riad": "Riads",
+      "villa": "Villen",
+      "appartement": "Apartments"
+    }
+  },
+  "contactPage": {
+    "metaTitle": "Kontakt",
+    "metaDescription": "Kontaktieren Sie unser Team, um einen Palast, ein Riad, eine Villa oder ein Apartment in Marrakesch zu buchen.",
+    "hero": {
+      "eyebrow": "Kontakt",
+      "title": "Sprechen wir über Ihren Aufenthalt",
+      "description": "Unser lokales Team antwortet innerhalb von 24h, um Ihren Aufenthalt in einem unserer Paläste, Riads, Villen oder Apartments zu organisieren.",
+      "imageLabel": "Terrasse mit Blick auf Marrakesch"
+    },
+    "form": {
+      "eyebrow": "Formular",
+      "title": "Senden Sie uns Ihre Anfrage",
+      "description": "Beschreiben Sie Ihr Aufenthaltsprojekt, wir melden uns mit einem persönlichen Angebot zurück."
+    },
+    "coords": {
+      "title": "Unsere Kontaktdaten",
+      "phone": "Telefon & WhatsApp",
+      "email": "E-Mail",
+      "address": "Adresse",
+      "availability": "Erreichbarkeit",
+      "whatsappCta": "Über WhatsApp schreiben",
+      "mapTitle": "Standort Marrakesch"
+    },
+    "faq": {
+      "eyebrow": "Häufig gestellte Fragen",
+      "title": "Alles, was Sie wissen müssen"
+    }
+  },
+  "galleryPage": {
+    "metaTitle": "Fotogalerie",
+    "metaDescription": "Entdecken Sie unsere Paläste, Riads, Villen und Apartments in Marrakesch in Bildern.",
+    "hero": {
+      "eyebrow": "Galerie",
+      "title": "Marrakesch in Bildern",
+      "description": "Ein Einblick in unsere Paläste, Riads, Villen und Apartments.",
+      "imageLabel": "Zellij-Mosaike und marokkanische Architektur"
+    },
+    "section": {
+      "eyebrow": "Portfolio",
+      "title": "Entdecken Sie unsere Welt",
+      "description": "Klicken Sie auf ein Foto, um es zu vergrößern. Filtern Sie nach Kategorie, um unsere Unterkünfte zu durchstöbern."
+    },
+    "categories": {
+      "all": "Alle",
+      "accommodations": "Unterkünfte",
+      "marrakech": "Marrakesch"
+    },
+    "images": {
+      "jemaaElFna": "Platz Jemaa el-Fna",
+      "medinaAlleys": "Gassen der Medina",
+      "majorelleGardens": "Majorelle-Gärten"
+    },
+    "viewSuffix": " — Ansicht {n}"
+  },
+  "aboutPage": {
+    "metaTitle": "Über uns",
+    "metaDescription": "Entdecken Sie Zénith Maison, spezialisiert auf die Vermietung von Palästen, Riads, Villen und Apartments in Marrakesch.",
+    "hero": {
+      "eyebrow": "Unsere Agentur",
+      "title": "Ein lokales Team im Dienste Ihres Aufenthalts",
+      "description": "Von Marrakesch aus gestalten wir maßgeschneiderte Aufenthalte in außergewöhnlichen Unterkünften, vom königlichen Palast bis zum zeitgenössischen Apartment.",
+      "imageLabel": "Zénith-Maison-Team in Marrakesch"
+    },
+    "story": {
+      "eyebrow": "Unsere Geschichte",
+      "title": "Das wahre Marrakesch entdecken, ohne logistischen Stress",
+      "paragraph1": "{siteName} entstand aus einer einfachen Feststellung: Eine hochwertige Unterkunft in Marrakesch zu finden, mit echter Betreuung und einem einzigen Ansprechpartner vom Anfang bis zum Ende des Aufenthalts, gleicht oft einem Hindernislauf. Unsere Agentur löst dieses Problem mit einem konstanten Qualitätsanspruch.",
+      "paragraph2": "Unser Team mit Sitz in Marrakesch wählt jeden Palast, jedes Riad, jede Villa und jedes Apartment unseres Katalogs persönlich aus.",
+      "imageLabel": "Lokales Team in Marrakesch"
+    },
+    "values": {
+      "eyebrow": "Unsere Werte",
+      "title": "Was unsere Arbeit leitet",
+      "authenticity": {
+        "title": "Authentizität",
+        "text": "Unterkünfte ausgewählt nach Charakter und Lage, zwischen traditioneller Medina und zeitgenössischem Marrakesch."
+      },
+      "rigor": {
+        "title": "Sorgfalt",
+        "text": "Jeder Palast, jedes Riad, jede Villa und jedes Apartment wird von unserem Team persönlich geprüft, bevor es in unseren Katalog aufgenommen wird."
+      },
+      "availability": {
+        "title": "Erreichbarkeit",
+        "text": "Ein lokales Team, das 7 Tage die Woche erreichbar ist, um Ihre Bedürfnisse vor und während Ihres Aufenthalts zu erfüllen."
+      }
+    }
+  },
+  "propertyDetail": {
+    "breadcrumb": "Unterkünfte",
+    "travelers": "Gäste",
+    "bedrooms": "Schlafzimmer",
+    "bathrooms": "Badezimmer",
+    "descriptionTitle": "Beschreibung",
+    "amenitiesTitle": "Ausstattung",
+    "priceNote": "Steuern und Reinigungsgebühren werden bei der Bestätigung angegeben.",
+    "bookWhatsapp": "Über WhatsApp buchen",
+    "requestQuote": "Angebot anfordern",
+    "alsoLike": "Das könnte Ihnen auch gefallen",
+    "whatsappMessage": "Hallo, ich möchte {name} ({location}) buchen.",
+    "mainPhotoLabel": "{name} — Hauptfoto",
+    "photoLabel": "{name} — Foto {n}"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Seite nicht gefunden",
+    "text": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "backHome": "Zurück zur Startseite"
+  },
+  "comparisonTable": {
+    "mobileHint": "Zum Vergleichen wischen",
+    "diyHeader": "Sie selbst (mehrere Websites)",
+    "hotelHeader": "Klassisches Hotel",
+    "rows": {
+      "selection": {
+        "label": "Auswahl geprüfter Paläste, Riads, Villen und Apartments",
+        "diy": "Variable Qualität, schwer zu überprüfen"
+      },
+      "interlocutor": {
+        "label": "Ein einziger Ansprechpartner vom Anfang bis zum Ende des Aufenthalts",
+        "hotel": "Nur für das Hotel"
+      },
+      "transfer": {
+        "label": "Flughafentransfer inbegriffen",
+        "hotel": "Oft gegen Aufpreis"
+      },
+      "concierge": {
+        "label": "Concierge- und Reinigungsservice inbegriffen"
+      },
+      "assistance": {
+        "label": "Lokale Unterstützung rund um die Uhr, auf Französisch & Englisch",
+        "hotel": "Je nach Einrichtung unterschiedlich"
+      },
+      "pricing": {
+        "label": "Transparente Preise, keine versteckten Kosten",
+        "diy": "Variable Servicegebühren",
+        "hotel": "Steuern oft zusätzlich"
+      }
+    }
+  },
+  "servicesGrid": {
+    "palais": {
+      "title": "Paläste",
+      "description": "Restaurierte ehemalige königliche Residenzen für Aufenthalte großer Gruppen mit Butler-Service und Privatkoch."
+    },
+    "riad": {
+      "title": "Riads",
+      "description": "Der unverfälschte Charme der traditionellen Medina: Innenhöfe mit Zellij-Mosaiken, Terrassen und handwerkliche Dekoration."
+    },
+    "villa": {
+      "title": "Villen",
+      "description": "Großzügige zeitgenössische Räume mit Pool und privatem Garten, ideal für Aufenthalte mit Familie oder Freunden."
+    },
+    "appartement": {
+      "title": "Apartments",
+      "description": "Moderne Adressen in Guéliz oder in der Medina, perfekt für einen Solo-, Paar- oder Freundschaftsaufenthalt."
+    }
+  },
+  "statsBar": {
+    "experience": "Jahre Erfahrung in Marrakesch",
+    "rating": "Durchschnittliche Kundenbewertung",
+    "stays": "Organisierte Aufenthalte & Ausflüge",
+    "support": "Verfügbarer Support"
+  },
+  "availabilityWidget": {
+    "arrival": "Anreise",
+    "departure": "Abreise",
+    "travelers": "Gäste",
+    "maxGuestsError": "Maximal 15 Personen",
+    "checkAvailability": "Verfügbarkeit prüfen",
+    "dateRangeJoin": " bis "
+  },
+  "datePicker": {
+    "weekdays": ["M", "D", "M", "D", "F", "S", "S"],
+    "placeholder": "tt.mm.jjjj",
+    "prevMonth": "Vorheriger Monat",
+    "nextMonth": "Nächster Monat"
+  },
+  "contactForm": {
+    "serviceOptions": {
+      "riad": "Riad",
+      "palais": "Palast",
+      "villa": "Villa",
+      "appartement": "Apartment",
+      "unknown": "Weiß ich noch nicht"
+    },
+    "nameLabel": "Vollständiger Name *",
+    "namePlaceholder": "Ihr Name",
+    "emailLabel": "E-Mail *",
+    "emailPlaceholder": "sie@email.com",
+    "phoneLabel": "Telefon / WhatsApp",
+    "phonePlaceholder": "+212 ...",
+    "datesLabel": "Geplante Daten",
+    "datesPlaceholder": "Z. B.: 12. bis 18. September",
+    "serviceLabel": "Gewünschter Service",
+    "messageLabel": "Nachricht *",
+    "messagePlaceholder": "Beschreiben Sie Ihr Aufenthaltsprojekt, die Personenzahl, gewünschte Aktivitäten...",
+    "guestsCountPrefix": "Anzahl der Personen: ",
+    "errorRequired": "Bitte füllen Sie alle Pflichtfelder aus.",
+    "errorSend": "Der Versand ist fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie uns über WhatsApp.",
+    "successMessage": "Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet, unser Team antwortet innerhalb von 24h. Sie können uns auch direkt über WhatsApp für eine schnellere Antwort schreiben.",
+    "sending": "Wird gesendet...",
+    "submit": "Anfrage senden"
+  },
+  "gallery": {
+    "close": "Schließen"
+  },
+  "ctaSection": {
+    "title": "Bereit, das Marrakesch-Erlebnis zu leben?",
+    "description": "Unser Team organisiert Ihren maßgeschneiderten Aufenthalt in einem unserer Paläste, Riads, Villen oder Apartments, mit nur einer Anfrage.",
+    "whatsappCta": "Über WhatsApp chatten",
+    "contactCta": "Kontaktieren Sie uns",
+    "imageLabel": "Sonnenuntergang über der Agafay-Wüste"
+  },
+  "reviewScore": {
+    "exceptional": "Außergewöhnlich",
+    "superb": "Hervorragend",
+    "veryGood": "Sehr gut",
+    "good": "Gut",
+    "nice": "Nett",
+    "noteLabel": "Bewertung des Aufenthalts"
+  },
+  "platformBadge": {
+    "reviewOn": "Bewertung veröffentlicht auf {platform}"
+  },
+  "properties": {
+    "palais-riyad-el-fassia": {
+      "categoryLabel": "Palast",
+      "location": "Medina von Marrakesch, Viertel Mouassine",
+      "shortDescription": "Restaurierter Palast aus dem 19. Jahrhundert mit zwei Innenhöfen, privatem Hammam und persönlichem Butler-Service.",
+      "description": "Der Palais Riyad El Fassia befindet sich in einer vollständig von marokkanischen Meisterhandwerkern restaurierten Residenz aus dem 19. Jahrhundert. Seine zwei offenen Innenhöfe, seine gewölbten Salons mit Zellij-Mosaiken und bemaltem Holz sowie sein Innenpool machen ihn zu einer außergewöhnlichen Adresse für Großfamilien oder Freundesgruppen, die einen königlichen Aufenthalt im Herzen der Medina wünschen. Ein engagiertes Team (Butler, Privatkoch, Spa) steht während des gesamten Aufenthalts vor Ort zur Verfügung.",
+      "amenities": [
+        "Beheizter Innenpool",
+        "Privater Hammam und Spa",
+        "Zwei Innenhöfe mit Brunnen",
+        "Butler-Service",
+        "Privatkoch auf Anfrage",
+        "Klimaanlage",
+        "Highspeed-WLAN",
+        "Flughafentransfer"
+      ]
+    },
+    "riad-al-manar": {
+      "categoryLabel": "Charmantes Riad",
+      "location": "Medina von Marrakesch",
+      "shortDescription": "Vollständig renoviertes traditionelles Riad mit zentralem Innenhof, Zellij-Brunnen und beheiztem Pool.",
+      "description": "Mitten in der Medina von Marrakesch gelegen, verbindet das Riad Al Manar marokkanische Authentizität mit modernem Komfort. Rund um den offenen Innenhof schaffen der Zellij-Brunnen und die Orangenbäume eine ruhige Atmosphäre. Die vier klimatisierten Suiten bieten jeweils eine eigene dekorative Identität aus handwerklichen Möbeln und hochwertiger Bettwäsche. Die Panoramaterrasse mit Blick über die Dächer der Medina und den Atlas eignet sich ideal für private Frühstücke und Abendessen.",
+      "amenities": [
+        "Beheizter Pool",
+        "Panoramaterrasse",
+        "Klimaanlage",
+        "Highspeed-WLAN",
+        "Frühstück inbegriffen",
+        "Butler-Service",
+        "Privater Hammam",
+        "Flughafentransfer"
+      ]
+    },
+    "riad-jasmin": {
+      "categoryLabel": "Charmantes Riad",
+      "location": "Medina, Kasbah-Viertel",
+      "shortDescription": "Intimes Riad nur wenige Schritte vom Bahia-Palast, handwerkliche Dekoration und private Dachterrasse.",
+      "description": "Das Riad Jasmin besticht durch seine warme Atmosphäre und seine vollständig von lokalen Handwerkern gefertigte Dekoration: Tadelakt, geschnitztes Zedernholz und handgefertigtes Zellij. Im ruhigen Kasbah-Viertel gelegen, nur wenige Gehminuten vom Bahia-Palast und dem Platz Jemaa el-Fna entfernt, bietet es privilegierten Zugang zu den wichtigsten Sehenswürdigkeiten der Medina bei gleichzeitiger echter Ruhe.",
+      "amenities": [
+        "Private Dachterrasse",
+        "Klimaanlage",
+        "Highspeed-WLAN",
+        "Frühstück inbegriffen",
+        "Kochkurse auf Anfrage",
+        "Concierge-Service"
+      ]
+    },
+    "villa-atlas-view": {
+      "categoryLabel": "Villa mit Pool",
+      "location": "Straße nach Ourika, Palmeraie",
+      "shortDescription": "Zeitgenössische Villa mit atemberaubendem Blick auf den Atlas, großem Infinity-Pool und privatem Garten.",
+      "description": "Die Villa Atlas View, ideal für Aufenthalte mit Familie oder Freunden, erstreckt sich über 800 m² bepflanzte Gärten rund um einen Infinity-Pool mit Blick auf das Atlasgebirge. Die großzügigen Räume, die voll ausgestattete Küche und der überdachte Sommersalon machen sie zu einem perfekten Ort für Gäste. Ein Privatkoch und Hauspersonal können auf Anfrage bereitgestellt werden.",
+      "amenities": [
+        "Infinity-Pool",
+        "800 m² privater Garten",
+        "Privatkoch auf Anfrage",
+        "Fitnessraum",
+        "Klimaanlage",
+        "Highspeed-WLAN",
+        "Privatparkplatz",
+        "24-Stunden-Sicherheitsdienst"
+      ]
+    },
+    "villa-palmeraie-dune": {
+      "categoryLabel": "Villa mit Pool",
+      "location": "Palmeraie von Marrakesch",
+      "shortDescription": "Design-Villa im Herzen der Palmeraie, Zen-Atmosphäre, beheizter Pool und Wellnessbereich.",
+      "description": "Umgeben von jahrhundertealten Palmen bietet die Villa Palmeraie Dune eine klare Architektur aus poliertem Beton, rohem Holz und großen Fensterfronten. Der Wellnessbereich mit Sauna und Massageraum sowie der ganzjährig beheizte Pool machen sie zu einer gefragten Adresse für erholsame Aufenthalte.",
+      "amenities": [
+        "Beheizter Pool",
+        "Sauna & Massageraum",
+        "Ausgestattete Küche",
+        "Klimaanlage",
+        "Highspeed-WLAN",
+        "Parkservice"
+      ]
+    },
+    "appartement-gueliz-loft": {
+      "categoryLabel": "Modernes Apartment",
+      "location": "Guéliz, Neustadt",
+      "shortDescription": "Modernes Loft im Herzen von Guéliz, nahe Restaurants und Boutiquen, Terrasse mit Stadtblick.",
+      "description": "Dieses Loft-Apartment liegt im lebendigen Viertel Guéliz und verbindet zeitgenössisches Design mit Funktionalität. In unmittelbarer Nähe der besten gastronomischen Adressen und Boutiquen von Marrakesch ist es eine ideale Basis, um sowohl die Neustadt als auch die in wenigen Minuten erreichbare Medina zu erkunden.",
+      "amenities": [
+        "Terrasse mit Aussicht",
+        "Klimaanlage",
+        "Highspeed-WLAN",
+        "Ausgestattete Küche",
+        "Gesicherter Parkplatz",
+        "Fitnessraum im Gebäude"
+      ]
+    },
+    "appartement-medina-suite": {
+      "categoryLabel": "Modernes Apartment",
+      "location": "Medina, nahe der Koutoubia",
+      "shortDescription": "Elegante Suite nur wenige Schritte von der Koutoubia entfernt, ideal für einen romantischen oder Solo-Aufenthalt.",
+      "description": "Diese helle Suite verbindet den Charme der Medina mit konsequent zeitgenössischem Komfort. Ihre Lage, nur wenige Gehminuten von der Koutoubia-Moschee und dem Platz Jemaa el-Fna entfernt, macht sie zu einem erstklassigen Ausgangspunkt, um Marrakesch zu Fuß zu entdecken, während man ein gemütliches, ruhiges Interieur genießt.",
+      "amenities": [
+        "Klimaanlage",
+        "Highspeed-WLAN",
+        "Ausgestattete Kitchenette",
+        "Frühstück auf Anfrage",
+        "Concierge-Service"
+      ]
+    }
+  },
+  "testimonials": {
+    "t1": {
+      "origin": "Frankreich",
+      "text": "Ein absolut perfekter Aufenthalt im Riad Al Manar. Das Team organisierte unseren Transfer und jedes Detail unseres Aufenthalts. Alles verlief von Anfang bis Ende reibungslos."
+    },
+    "t2": {
+      "origin": "Italien",
+      "text": "Die Villa Atlas View übertrifft alle Fotos. Herrlicher Pool, aufmerksames Personal: eine der schönsten Erinnerungen an unsere Marokkoreise."
+    },
+    "t3": {
+      "origin": "Vereinigte Arabische Emirate",
+      "text": "Einfache Buchung, schnelle Kommunikation auf Englisch. Das Riad war unglaublich raffiniert, ich empfehle es ohne zu zögern."
+    },
+    "t4": {
+      "origin": "Belgien",
+      "text": "Ausgezeichnetes Preis-Leistungs-Verhältnis für das Apartment in Guéliz, sehr gut gelegen, ideal um Marrakesch mit der Familie zu entdecken."
+    },
+    "t5": {
+      "origin": "Katar",
+      "text": "Ein Serviceniveau, das den größten Palästen würdig ist. Der Butler und der Privatkoch machten unser Familientreffen unvergesslich, jedes Detail war durchdacht."
+    },
+    "t6": {
+      "origin": "Schweiz",
+      "text": "Die Villa war eine Oase der Ruhe: Sauna, Massage, beheizter Pool die ganze Woche. Genau die Auszeit, die wir brauchten."
+    },
+    "t7": {
+      "origin": "Kanada",
+      "text": "Helle Suite, hervorragend gelegen nur wenige Schritte von der Koutoubia entfernt. Einwandfreie Kommunikation vor und während des Aufenthalts, wir empfehlen es ohne zu zögern."
+    },
+    "t8": {
+      "origin": "Frankreich",
+      "text": "Wir waren zu 14. für einen Familiengeburtstag: Der Palais Riyad El Fassia übernahm die Unterkunft, die Mahlzeiten und sogar die Aktivitäten vor Ort. Bemerkenswerte Professionalität von Anfang bis Ende."
+    },
+    "t9": {
+      "origin": "Marokko",
+      "text": "Als regelmäßiger Geschäftsreisender in Marrakesch schätze ich die Reaktionsfähigkeit des Teams und die gleichbleibende Servicequalität bei jedem Aufenthalt im Apartment in Guéliz."
+    },
+    "t10": {
+      "origin": "Italien",
+      "text": "Ein sehr gelungener Ausflug unter Freundinnen in der Villa Atlas View. Der Blick auf den Atlas beim Frühstück bleibt eine bleibende Erinnerung. Ein kleines WLAN-Problem, das vom Team vor Ort schnell gelöst wurde."
+    }
+  },
+  "faqs": {
+    "f1": {
+      "question": "Wie buche ich ein Riad, einen Palast, eine Villa oder ein Apartment?",
+      "answer": "Sie können direkt über das Kontaktformular der Website, per WhatsApp oder telefonisch buchen. Wir bestätigen die Verfügbarkeit innerhalb von 24h und senden Ihnen ein detailliertes Angebot, bevor eine Anzahlung angefordert wird."
+    },
+    "f2": {
+      "question": "Ist der Flughafentransfer inbegriffen?",
+      "answer": "Der Flughafentransfer ist bei den meisten unserer Riads, Paläste und Villen inbegriffen. Er kann für unsere Apartments auf Anfrage als Option hinzugefügt werden."
+    },
+    "f3": {
+      "question": "Wie sind die An- und Abreisezeiten?",
+      "answer": "Die Anreise erfolgt in der Regel ab 15 Uhr, die Abreise vor Mittag. Frühe Ankünfte oder späte Abreisen können je nach Verfügbarkeit der Unterkunft organisiert werden."
+    },
+    "f4": {
+      "question": "Sind Frühstück und Reinigung inbegriffen?",
+      "answer": "Das hängt von der Unterkunft ab: Die meisten unserer Riads und Paläste umfassen Frühstück und einen täglichen Reinigungsservice. Die genauen Leistungen entnehmen Sie bitte der jeweiligen Objektbeschreibung."
+    },
+    "f5": {
+      "question": "Kann ich meine Buchung stornieren oder ändern?",
+      "answer": "Änderungen sind bis 48h vor dem geplanten Datum möglich, vorbehaltlich der Verfügbarkeit. Konsultieren Sie unsere Allgemeinen Geschäftsbedingungen oder kontaktieren Sie unser Team für spezifische Anfragen."
+    }
+  }
+}

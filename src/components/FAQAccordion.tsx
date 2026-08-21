@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import type { FAQ } from "@/types";
 
 export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
+  const t = useTranslations("faqs");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -11,14 +13,16 @@ export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
       {faqs.map((faq, i) => {
         const isOpen = openIndex === i;
         return (
-          <div key={faq.question}>
+          <div key={faq.id}>
             <button
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : i)}
               aria-expanded={isOpen}
               className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
             >
-              <span className="font-display text-base text-ink-900">{faq.question}</span>
+              <span className="font-display text-base text-ink-900">
+                {t(`${faq.id}.question`)}
+              </span>
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -32,7 +36,9 @@ export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
               </svg>
             </button>
             {isOpen && (
-              <p className="px-6 pb-5 text-sm leading-relaxed text-ink-600">{faq.answer}</p>
+              <p className="px-6 pb-5 text-sm leading-relaxed text-ink-600">
+                {t(`${faq.id}.answer`)}
+              </p>
             )}
           </div>
         );

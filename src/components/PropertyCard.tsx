@@ -1,8 +1,14 @@
-import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import ImageWithFallback from "./ImageWithFallback";
+import { formatPrice } from "@/lib/format";
 import type { Property } from "@/types";
 
 export default function PropertyCard({ property }: { property: Property }) {
+  const locale = useLocale();
+  const t = useTranslations(`properties.${property.slug}`);
+  const tCommon = useTranslations("common");
+
   return (
     <Link
       href={`/hebergements/${property.slug}`}
@@ -18,11 +24,11 @@ export default function PropertyCard({ property }: { property: Property }) {
           className="object-cover transition duration-500 group-hover:scale-105"
         />
         <span className="absolute left-4 top-4 rounded-full bg-ink-950/80 px-3 py-1 text-xs font-semibold text-gold-300 backdrop-blur-sm">
-          {property.categoryLabel}
+          {t("categoryLabel")}
         </span>
         {property.featured && (
           <span className="absolute right-4 top-4 rounded-full bg-gold-500 px-3 py-1 text-xs font-semibold text-ink-950">
-            Coup de cœur
+            {tCommon("featured")}
           </span>
         )}
       </div>
@@ -36,24 +42,30 @@ export default function PropertyCard({ property }: { property: Property }) {
             {property.rating}
           </div>
         </div>
-        <p className="mt-1 text-sm text-ink-400">{property.location}</p>
+        <p className="mt-1 text-sm text-ink-400">{t("location")}</p>
         <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-ink-600">
-          {property.shortDescription}
+          {t("shortDescription")}
         </p>
         <div className="mt-4 flex items-center gap-4 text-xs text-ink-400">
-          <span>{property.capacity} pers.</span>
-          <span>{property.bedrooms} chambres</span>
-          <span>{property.bathrooms} sdb</span>
+          <span>
+            {property.capacity} {tCommon("guestsShort")}
+          </span>
+          <span>
+            {property.bedrooms} {tCommon("bedroomsShort")}
+          </span>
+          <span>
+            {property.bathrooms} {tCommon("bathroomsShort")}
+          </span>
         </div>
         <div className="mt-5 flex items-center justify-between border-t border-ink-100 pt-4">
           <div>
             <span className="font-display text-xl text-ink-900">
-              {property.pricePerNight.toLocaleString("fr-FR")} MAD
+              {formatPrice(property.pricePerNight, locale)} MAD
             </span>
-            <span className="text-sm text-ink-400"> / nuit</span>
+            <span className="text-sm text-ink-400"> {tCommon("perNight")}</span>
           </div>
           <span className="text-sm font-semibold text-clay-600 transition group-hover:text-clay-700">
-            Voir le détail →
+            {tCommon("viewDetail")}
           </span>
         </div>
       </div>

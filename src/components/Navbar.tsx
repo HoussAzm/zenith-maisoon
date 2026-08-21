@@ -1,20 +1,24 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
-
-const links = [
-  { href: "/", label: "Accueil" },
-  { href: "/hebergements", label: "Hébergements" },
-  { href: "/galerie", label: "Galerie" },
-  { href: "/a-propos", label: "À propos" },
-  { href: "/contact", label: "Contact" },
-];
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
+  const t = useTranslations("nav");
+  const tCommon = useTranslations("common");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const links = [
+    { href: "/", label: t("home") },
+    { href: "/hebergements", label: t("accommodations") },
+    { href: "/galerie", label: t("gallery") },
+    { href: "/a-propos", label: t("about") },
+    { href: "/contact", label: t("contact") },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -64,31 +68,35 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <LanguageSwitcher />
           <a
-            href={whatsappLink("Bonjour, je souhaite avoir plus d'informations.")}
+            href={whatsappLink(tCommon("whatsappGeneral"))}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-clay-500 px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:bg-clay-600"
           >
-            Réserver maintenant
+            {t("bookNow")}
           </a>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Ouvrir le menu"
-          aria-expanded={open}
-          className="ml-auto flex h-10 w-10 items-center justify-center rounded-full border border-sand-100/20 text-sand-50 lg:hidden"
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
-            {open ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
-            )}
-          </svg>
-        </button>
+        <div className="ml-auto flex items-center gap-2 lg:hidden">
+          <LanguageSwitcher />
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={t("openMenu")}
+            aria-expanded={open}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-sand-100/20 text-sand-50"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
+              {open ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -105,12 +113,12 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href={whatsappLink("Bonjour, je souhaite avoir plus d'informations.")}
+              href={whatsappLink(tCommon("whatsappGeneral"))}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 rounded-full bg-clay-500 px-5 py-3 text-center text-sm font-semibold text-white"
             >
-              Réserver maintenant
+              {t("bookNow")}
             </a>
           </nav>
         </div>

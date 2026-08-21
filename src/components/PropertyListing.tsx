@@ -1,18 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import PropertyCard from "./PropertyCard";
 import type { Property, PropertyCategory } from "@/types";
 
-const filters: { value: PropertyCategory | "tous"; label: string }[] = [
-  { value: "tous", label: "Tous" },
-  { value: "palais", label: "Palais" },
-  { value: "riad", label: "Riads" },
-  { value: "villa", label: "Villas" },
-  { value: "appartement", label: "Appartements" },
-];
-
-const categoryValues = filters.map((f) => f.value);
+const filterValues: (PropertyCategory | "tous")[] = ["tous", "palais", "riad", "villa", "appartement"];
 
 export default function PropertyListing({
   properties,
@@ -21,8 +14,9 @@ export default function PropertyListing({
   properties: Property[];
   initialCategory?: string;
 }) {
+  const t = useTranslations("accommodationsPage.filters");
   const [active, setActive] = useState<PropertyCategory | "tous">(
-    categoryValues.includes(initialCategory as PropertyCategory)
+    filterValues.includes(initialCategory as PropertyCategory)
       ? (initialCategory as PropertyCategory)
       : "tous"
   );
@@ -35,18 +29,18 @@ export default function PropertyListing({
   return (
     <div>
       <div className="mb-10 flex flex-wrap justify-center gap-2">
-        {filters.map((f) => (
+        {filterValues.map((value) => (
           <button
-            key={f.value}
+            key={value}
             type="button"
-            onClick={() => setActive(f.value)}
+            onClick={() => setActive(value)}
             className={`rounded-full border px-5 py-2 text-sm font-medium transition ${
-              active === f.value
+              active === value
                 ? "border-clay-600 bg-clay-600 text-white"
                 : "border-ink-100 bg-white text-ink-600 hover:border-clay-300"
             }`}
           >
-            {f.label}
+            {t(value === "tous" ? "all" : value)}
           </button>
         ))}
       </div>

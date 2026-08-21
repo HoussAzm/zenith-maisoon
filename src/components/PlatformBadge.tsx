@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import type { ReviewPlatform } from "@/types";
 import AirbnbLogo from "./AirbnbLogo";
 import AgodaLogo from "./AgodaLogo";
@@ -9,12 +10,14 @@ const platforms: Record<ReviewPlatform, { label: string; letter: string; bg: str
 };
 
 export default function PlatformBadge({ platform }: { platform: ReviewPlatform }) {
+  const t = useTranslations("platformBadge");
   const p = platforms[platform];
+  const title = t("reviewOn", { platform: p.label });
 
   if (platform === "agoda") {
     return (
       <span
-        title={`Avis publié sur ${p.label}`}
+        title={title}
         className="inline-flex items-center rounded-full border border-ink-100 bg-white/90 px-2.5 py-1 shadow-sm"
       >
         <AgodaLogo className="h-3.5 w-auto" />
@@ -24,7 +27,7 @@ export default function PlatformBadge({ platform }: { platform: ReviewPlatform }
 
   return (
     <span
-      title={`Avis publié sur ${p.label}`}
+      title={title}
       className="inline-flex items-center gap-1.5 rounded-full border border-ink-100 bg-white/90 py-1 pl-1 pr-2.5 shadow-sm"
     >
       {platform === "airbnb" ? (

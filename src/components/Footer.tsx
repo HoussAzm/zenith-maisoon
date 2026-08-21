@@ -1,25 +1,29 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/site-config";
 
-const columns = [
-  {
-    title: "Nos hébergements",
-    links: [
-      { href: "/hebergements", label: "Palais, riads, villas & appartements" },
-      { href: "/galerie", label: "Galerie photos" },
-    ],
-  },
-  {
-    title: "À propos",
-    links: [
-      { href: "/a-propos", label: "Notre agence" },
-      { href: "/contact", label: "Contact" },
-      { href: "/contact#faq", label: "Questions fréquentes" },
-    ],
-  },
-];
-
 export default function Footer() {
+  const t = useTranslations("footer");
+  const tCommon = useTranslations("common");
+
+  const columns = [
+    {
+      title: t("accommodationsTitle"),
+      links: [
+        { href: "/hebergements", label: t("accommodationsLink") },
+        { href: "/galerie", label: t("galleryLink") },
+      ],
+    },
+    {
+      title: t("aboutTitle"),
+      links: [
+        { href: "/a-propos", label: t("agencyLink") },
+        { href: "/contact", label: t("contactLink") },
+        { href: "/contact#faq", label: t("faqLink") },
+      ],
+    },
+  ];
+
   return (
     <footer className="bg-ink-950 text-sand-100">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 py-16 sm:px-8 md:grid-cols-4">
@@ -34,8 +38,7 @@ export default function Footer() {
             <span className="font-display text-lg text-sand-50">{siteConfig.name}</span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-sand-100/70">
-            Votre agence de confiance à Marrakech pour la location de palais, riads, villas
-            et appartements de standing, avec conciergerie et service dédiés.
+            {t("tagline")}
           </p>
           <div className="mt-6 flex gap-3">
             <a
@@ -85,13 +88,13 @@ export default function Footer() {
 
         <div>
           <h4 className="font-display text-sm uppercase tracking-wider text-gold-300">
-            Contact
+            {t("contactTitle")}
           </h4>
           <ul className="mt-4 space-y-2.5 text-sm text-sand-100/70">
             <li>{siteConfig.address}</li>
             <li>{siteConfig.phoneDisplay}</li>
             <li>{siteConfig.email}</li>
-            <li>{siteConfig.hours}</li>
+            <li>{tCommon("hours")}</li>
           </ul>
         </div>
       </div>
@@ -99,9 +102,9 @@ export default function Footer() {
       <div className="border-t border-sand-100/10 py-6">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 text-xs text-sand-100/50 sm:flex-row sm:px-8">
           <p>
-            © {new Date().getFullYear()} {siteConfig.name}. Tous droits réservés.
+            © {new Date().getFullYear()} {siteConfig.name}. {t("rightsReserved")}
           </p>
-          <p>Marrakech, Maroc</p>
+          <p>{t("location")}</p>
         </div>
       </div>
     </footer>

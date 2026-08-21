@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import type { Testimonial } from "@/types";
 import PlatformBadge from "./PlatformBadge";
 import BookingScore from "./BookingScore";
@@ -13,6 +14,8 @@ function initials(name: string) {
 }
 
 export default function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+  const t = useTranslations("testimonials");
+
   return (
     <div className="flex h-full flex-col rounded-2xl border border-ink-100 bg-white p-7 shadow-soft">
       <div className="flex items-center justify-between gap-2">
@@ -39,7 +42,7 @@ export default function TestimonialCard({ testimonial }: { testimonial: Testimon
         <PlatformBadge platform={testimonial.platform} />
       </div>
       <p className="mt-4 flex-1 text-sm leading-relaxed text-ink-600">
-        &ldquo;{testimonial.text}&rdquo;
+        &ldquo;{t(`${testimonial.id}.text`)}&rdquo;
       </p>
       <div className="mt-6 flex items-center gap-3 border-t border-ink-100 pt-5">
         <span className="flex h-11 w-11 items-center justify-center rounded-full bg-clay-500/10 font-display text-sm text-clay-600">
@@ -47,7 +50,7 @@ export default function TestimonialCard({ testimonial }: { testimonial: Testimon
         </span>
         <div>
           <div className="text-sm font-semibold text-ink-900">{testimonial.name}</div>
-          <div className="text-xs text-ink-400">{testimonial.origin}</div>
+          <div className="text-xs text-ink-400">{t(`${testimonial.id}.origin`)}</div>
           <div className="text-xs text-clay-600">{testimonial.service}</div>
         </div>
       </div>

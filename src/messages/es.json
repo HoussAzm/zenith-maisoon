@@ -1,0 +1,501 @@
+{
+  "metadata": {
+    "tagline": "Palacios, riads y villas de prestigio en Marrakech",
+    "description": "Agencia de alquiler en Marrakech: palacios, riads, villas y apartamentos de lujo con conserjería dedicada.",
+    "ogDescription": "Palacios, riads, villas y apartamentos de lujo en Marrakech.",
+    "keywords": [
+      "palacio Marrakech",
+      "riad Marrakech",
+      "villa Marrakech",
+      "apartamento Marrakech",
+      "alquiler riad Marrakech"
+    ]
+  },
+  "nav": {
+    "home": "Inicio",
+    "accommodations": "Alojamientos",
+    "gallery": "Galería",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "bookNow": "Reservar ahora",
+    "openMenu": "Abrir menú",
+    "language": "Idioma"
+  },
+  "footer": {
+    "tagline": "Su agencia de confianza en Marrakech para el alquiler de palacios, riads, villas y apartamentos de lujo, con conserjería y servicio dedicados.",
+    "accommodationsTitle": "Nuestros alojamientos",
+    "accommodationsLink": "Palacios, riads, villas y apartamentos",
+    "galleryLink": "Galería de fotos",
+    "aboutTitle": "Nosotros",
+    "agencyLink": "Nuestra agencia",
+    "contactLink": "Contacto",
+    "faqLink": "Preguntas frecuentes",
+    "contactTitle": "Contacto",
+    "rightsReserved": "Todos los derechos reservados.",
+    "location": "Marrakech, Marruecos"
+  },
+  "common": {
+    "whatsappGeneral": "Hola, me gustaría obtener más información.",
+    "whatsappServices": "Hola, me gustaría obtener más información sobre sus servicios.",
+    "whatsappStay": "Hola, me gustaría organizar mi estancia en Marrakech.",
+    "perNight": "/ noche",
+    "viewDetail": "Ver detalles →",
+    "discover": "Descubrir →",
+    "guestsShort": "personas",
+    "bedroomsShort": "habitaciones",
+    "bathroomsShort": "baños",
+    "featured": "Favorito",
+    "reviews": "opiniones",
+    "hours": "Disponible 7 días a la semana — de 8h a 22h"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Marrakech, Marruecos",
+      "title": "Su estancia de prestigio en Marrakech, sin compromisos",
+      "description": "Palacios, riads y villas excepcionales en el corazón de Marrakech — una sola agencia para organizar toda su estancia.",
+      "imageLabel": "Patio de riad tradicional en Marrakech",
+      "primaryCta": "Descubrir nuestros alojamientos",
+      "secondaryCta": "Solicitar presupuesto"
+    },
+    "categories": {
+      "eyebrow": "Nuestras categorías",
+      "title": "Encuentre su tipo de alojamiento ideal",
+      "description": "Del palacio real al apartamento moderno, una selección pensada para cada estilo de estancia en Marrakech."
+    },
+    "featured": {
+      "eyebrow": "Alojamientos",
+      "title": "Nuestras direcciones favoritas",
+      "description": "Una selección de palacios, riads, villas y apartamentos elegidos por su ubicación, comodidad y servicio.",
+      "viewAll": "Ver todos los alojamientos"
+    },
+    "why": {
+      "eyebrow": "Por qué elegirnos",
+      "title": "Un único interlocutor, cero complicaciones",
+      "description": "Compare lo que {siteName} le hace ganar frente a una reserva hecha por su cuenta o un hotel clásico."
+    },
+    "testimonials": {
+      "eyebrow": "Testimonios",
+      "title": "Lo que dicen nuestros clientes",
+      "description": "Estancias organizadas con esmero, desde el primer contacto hasta el último día."
+    },
+    "faq": {
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Todo lo que necesita saber"
+    }
+  },
+  "accommodationsPage": {
+    "metaTitle": "Riads, Villas y Apartamentos en Marrakech",
+    "metaDescription": "Descubra nuestra selección de riads, villas y apartamentos de lujo en alquiler en Marrakech, con piscina, conserjería y servicio de alta gama.",
+    "hero": {
+      "eyebrow": "Alojamientos",
+      "title": "Riads, Villas y Apartamentos",
+      "description": "Una selección exclusiva de direcciones en Marrakech, desde la medina tradicional hasta las villas contemporáneas de la Palmeraie.",
+      "imageLabel": "Piscina de villa en Marrakech"
+    },
+    "section": {
+      "eyebrow": "Nuestras direcciones",
+      "title": "Elija su estancia ideal",
+      "description": "Filtre por tipo de alojamiento para encontrar el riad, la villa o el apartamento que se adapte a su estancia."
+    },
+    "filters": {
+      "all": "Todos",
+      "palais": "Palacios",
+      "riad": "Riads",
+      "villa": "Villas",
+      "appartement": "Apartamentos"
+    }
+  },
+  "contactPage": {
+    "metaTitle": "Contacto",
+    "metaDescription": "Contacte con nuestro equipo para reservar un palacio, riad, villa o apartamento en Marrakech.",
+    "hero": {
+      "eyebrow": "Contacto",
+      "title": "Hablemos de su estancia",
+      "description": "Nuestro equipo local responde en 24h para organizar su estancia en uno de nuestros palacios, riads, villas o apartamentos.",
+      "imageLabel": "Terraza con vistas a Marrakech"
+    },
+    "form": {
+      "eyebrow": "Formulario",
+      "title": "Envíenos su solicitud",
+      "description": "Describa su proyecto de estancia, le responderemos con una propuesta personalizada."
+    },
+    "coords": {
+      "title": "Nuestros datos de contacto",
+      "phone": "Teléfono y WhatsApp",
+      "email": "Correo electrónico",
+      "address": "Dirección",
+      "availability": "Disponibilidad",
+      "whatsappCta": "Escribir por WhatsApp",
+      "mapTitle": "Ubicación de Marrakech"
+    },
+    "faq": {
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Todo lo que necesita saber"
+    }
+  },
+  "galleryPage": {
+    "metaTitle": "Galería de fotos",
+    "metaDescription": "Descubra en imágenes nuestros palacios, riads, villas y apartamentos en Marrakech.",
+    "hero": {
+      "eyebrow": "Galería",
+      "title": "Marrakech en imágenes",
+      "description": "Un vistazo a nuestros palacios, riads, villas y apartamentos.",
+      "imageLabel": "Zellige y arquitectura marroquí"
+    },
+    "section": {
+      "eyebrow": "Portafolio",
+      "title": "Explore nuestro universo",
+      "description": "Haga clic en una foto para ampliarla. Filtre por categoría para explorar nuestros alojamientos."
+    },
+    "categories": {
+      "all": "Todos",
+      "accommodations": "Alojamientos",
+      "marrakech": "Marrakech"
+    },
+    "images": {
+      "jemaaElFna": "Plaza Jemaa el-Fna",
+      "medinaAlleys": "Callejuelas de la medina",
+      "majorelleGardens": "Jardines Majorelle"
+    },
+    "viewSuffix": " — vista {n}"
+  },
+  "aboutPage": {
+    "metaTitle": "Nosotros",
+    "metaDescription": "Descubra Zénith Maison, agencia especialista en el alquiler de palacios, riads, villas y apartamentos en Marrakech.",
+    "hero": {
+      "eyebrow": "Nuestra agencia",
+      "title": "Un equipo local al servicio de su estancia",
+      "description": "Desde Marrakech, diseñamos estancias a medida en alojamientos excepcionales, del palacio real al apartamento contemporáneo.",
+      "imageLabel": "Equipo Zénith Maison en Marrakech"
+    },
+    "story": {
+      "eyebrow": "Nuestra historia",
+      "title": "Descubrir el verdadero Marrakech, sin el estrés logístico",
+      "paragraph1": "{siteName} nació de una constatación simple: encontrar un alojamiento de categoría en Marrakech, con un seguimiento real y un único interlocutor de principio a fin, suele ser una odisea. Nuestra agencia resuelve este problema con una exigencia de calidad constante.",
+      "paragraph2": "Nuestro equipo, con sede en Marrakech, selecciona personalmente cada palacio, cada riad, cada villa y cada apartamento de nuestro catálogo.",
+      "imageLabel": "Equipo local en Marrakech"
+    },
+    "values": {
+      "eyebrow": "Nuestros valores",
+      "title": "Lo que guía nuestro trabajo",
+      "authenticity": {
+        "title": "Autenticidad",
+        "text": "Alojamientos seleccionados por su carácter y ubicación, entre la medina tradicional y el Marrakech contemporáneo."
+      },
+      "rigor": {
+        "title": "Exigencia",
+        "text": "Cada palacio, riad, villa y apartamento es verificado personalmente por nuestro equipo antes de incorporarse a nuestro catálogo."
+      },
+      "availability": {
+        "title": "Disponibilidad",
+        "text": "Un equipo local disponible los 7 días de la semana para atender sus necesidades antes y durante su estancia."
+      }
+    }
+  },
+  "propertyDetail": {
+    "breadcrumb": "Alojamientos",
+    "travelers": "Huéspedes",
+    "bedrooms": "Habitaciones",
+    "bathrooms": "Baños",
+    "descriptionTitle": "Descripción",
+    "amenitiesTitle": "Servicios",
+    "priceNote": "Los impuestos y gastos de limpieza se especifican en el momento de la confirmación.",
+    "bookWhatsapp": "Reservar por WhatsApp",
+    "requestQuote": "Solicitar presupuesto",
+    "alsoLike": "También le puede gustar",
+    "whatsappMessage": "Hola, me gustaría reservar {name} ({location}).",
+    "mainPhotoLabel": "{name} — foto principal",
+    "photoLabel": "{name} — foto {n}"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Página no encontrada",
+    "text": "La página que busca no existe o ha sido movida.",
+    "backHome": "Volver al inicio"
+  },
+  "comparisonTable": {
+    "mobileHint": "Deslice para comparar",
+    "diyHeader": "Usted mismo (varios sitios)",
+    "hotelHeader": "Hotel clásico",
+    "rows": {
+      "selection": {
+        "label": "Selección de palacios, riads, villas y apartamentos verificados",
+        "diy": "Calidad variable, difícil de verificar"
+      },
+      "interlocutor": {
+        "label": "Un único interlocutor de principio a fin",
+        "hotel": "Solo para el hotel"
+      },
+      "transfer": {
+        "label": "Traslado desde el aeropuerto incluido",
+        "hotel": "A menudo con suplemento"
+      },
+      "concierge": {
+        "label": "Conserjería y servicio de limpieza incluidos"
+      },
+      "assistance": {
+        "label": "Asistencia local 24/7, en francés e inglés",
+        "hotel": "Variable según el establecimiento"
+      },
+      "pricing": {
+        "label": "Precio transparente, sin costes ocultos",
+        "diy": "Gastos de servicio variables",
+        "hotel": "Impuestos a menudo adicionales"
+      }
+    }
+  },
+  "servicesGrid": {
+    "palais": {
+      "title": "Palacios",
+      "description": "Antiguas residencias reales restauradas, para estancias en grandes grupos con servicio de mayordomo y chef privado."
+    },
+    "riad": {
+      "title": "Riads",
+      "description": "El encanto intacto de la medina tradicional: patios de zellige, terrazas y decoración artesanal."
+    },
+    "villa": {
+      "title": "Villas",
+      "description": "Grandes espacios contemporáneos con piscina y jardín privado, ideales para estancias en familia o con amigos."
+    },
+    "appartement": {
+      "title": "Apartamentos",
+      "description": "Direcciones modernas en Guéliz o en la medina, perfectas para una estancia en solitario, en pareja o con amigos."
+    }
+  },
+  "statsBar": {
+    "experience": "Años de experiencia en Marrakech",
+    "rating": "Valoración media de los clientes",
+    "stays": "Estancias y salidas organizadas",
+    "support": "Asistencia disponible"
+  },
+  "availabilityWidget": {
+    "arrival": "Llegada",
+    "departure": "Salida",
+    "travelers": "Huéspedes",
+    "maxGuestsError": "Máximo 15 personas",
+    "checkAvailability": "Consultar disponibilidad",
+    "dateRangeJoin": " al "
+  },
+  "datePicker": {
+    "weekdays": ["L", "M", "X", "J", "V", "S", "D"],
+    "placeholder": "dd/mm/aaaa",
+    "prevMonth": "Mes anterior",
+    "nextMonth": "Mes siguiente"
+  },
+  "contactForm": {
+    "serviceOptions": {
+      "riad": "Riad",
+      "palais": "Palacio",
+      "villa": "Villa",
+      "appartement": "Apartamento",
+      "unknown": "Aún no lo sé"
+    },
+    "nameLabel": "Nombre completo *",
+    "namePlaceholder": "Su nombre",
+    "emailLabel": "Correo electrónico *",
+    "emailPlaceholder": "usted@email.com",
+    "phoneLabel": "Teléfono / WhatsApp",
+    "phonePlaceholder": "+212 ...",
+    "datesLabel": "Fechas previstas",
+    "datesPlaceholder": "Ej: del 12 al 18 de septiembre",
+    "serviceLabel": "Servicio deseado",
+    "messageLabel": "Mensaje *",
+    "messagePlaceholder": "Describa su proyecto de estancia, el número de personas, sus preferencias de actividades...",
+    "guestsCountPrefix": "Número de personas: ",
+    "errorRequired": "Por favor, complete todos los campos obligatorios.",
+    "errorSend": "El envío ha fallado. Vuelva a intentarlo o escríbanos por WhatsApp.",
+    "successMessage": "¡Gracias! Su solicitud se ha enviado correctamente, nuestro equipo le responderá en 24h. También puede escribirnos directamente por WhatsApp para una respuesta más rápida.",
+    "sending": "Enviando...",
+    "submit": "Enviar solicitud"
+  },
+  "gallery": {
+    "close": "Cerrar"
+  },
+  "ctaSection": {
+    "title": "¿Listo para vivir la experiencia de Marrakech?",
+    "description": "Nuestro equipo organiza su estancia a medida en uno de nuestros palacios, riads, villas o apartamentos, en una sola solicitud.",
+    "whatsappCta": "Chatear por WhatsApp",
+    "contactCta": "Contáctenos",
+    "imageLabel": "Atardecer sobre el desierto de Agafay"
+  },
+  "reviewScore": {
+    "exceptional": "Excepcional",
+    "superb": "Magnífico",
+    "veryGood": "Muy bien",
+    "good": "Bien",
+    "nice": "Agradable",
+    "noteLabel": "Valoración de la estancia"
+  },
+  "platformBadge": {
+    "reviewOn": "Opinión publicada en {platform}"
+  },
+  "properties": {
+    "palais-riyad-el-fassia": {
+      "categoryLabel": "Palacio",
+      "location": "Medina de Marrakech, barrio de Mouassine",
+      "shortDescription": "Antiguo palacio del siglo XIX restaurado con dos patios, hammam privado y servicio de mayordomo dedicado.",
+      "description": "El Palais Riyad El Fassia ocupa una residencia del siglo XIX totalmente restaurada por maestros artesanos marroquíes. Sus dos patios al aire libre, sus salones abovedados en zellige y madera pintada, y su piscina interior lo convierten en una dirección excepcional para grandes familias o grupos de amigos que buscan una estancia real en pleno corazón de la medina. Un equipo dedicado (mayordomo, chef privado, spa) está disponible in situ durante toda la estancia.",
+      "amenities": [
+        "Piscina interior climatizada",
+        "Hammam y spa privados",
+        "Dos patios con fuentes",
+        "Servicio de mayordomo",
+        "Chef privado bajo petición",
+        "Aire acondicionado",
+        "Wifi de alta velocidad",
+        "Traslado desde el aeropuerto"
+      ]
+    },
+    "riad-al-manar": {
+      "categoryLabel": "Riad con encanto",
+      "location": "Medina de Marrakech",
+      "shortDescription": "Riad tradicional totalmente renovado con patio central, fuente de zellige y piscina climatizada.",
+      "description": "Ubicado en el corazón de la medina de Marrakech, el Riad Al Manar combina la autenticidad marroquí con el confort moderno. Alrededor de su patio al aire libre, la fuente de zellige y los naranjos crean un ambiente sereno. Las cuatro suites climatizadas ofrecen cada una su propia identidad decorativa, entre mobiliario artesanal y ropa de cama de alta gama. La terraza panorámica con vistas a los tejados de la medina y al Atlas es ideal para desayunos y cenas privadas.",
+      "amenities": [
+        "Piscina climatizada",
+        "Terraza panorámica",
+        "Aire acondicionado",
+        "Wifi de alta velocidad",
+        "Desayuno incluido",
+        "Servicio de mayordomo",
+        "Hammam privado",
+        "Traslado desde el aeropuerto"
+      ]
+    },
+    "riad-jasmin": {
+      "categoryLabel": "Riad con encanto",
+      "location": "Medina, barrio de la Kasbah",
+      "shortDescription": "Riad íntimo a pocos pasos del Palacio Bahía, decoración artesanal y azotea privada.",
+      "description": "El Riad Jasmin seduce por su ambiente acogedor y su decoración realizada íntegramente por artesanos locales: tadelakt, madera de cedro tallada y zellige hecho a mano. Situado en el tranquilo barrio de la Kasbah, a pocos minutos a pie del Palacio Bahía y de la plaza Jemaa el-Fna, ofrece un acceso privilegiado a los principales lugares de la medina preservando una auténtica tranquilidad.",
+      "amenities": [
+        "Azotea privada",
+        "Aire acondicionado",
+        "Wifi de alta velocidad",
+        "Desayuno incluido",
+        "Clases de cocina bajo petición",
+        "Conserjería"
+      ]
+    },
+    "villa-atlas-view": {
+      "categoryLabel": "Villa con piscina",
+      "location": "Carretera de Ourika, Palmeraie",
+      "shortDescription": "Villa contemporánea con vistas impresionantes al Atlas, gran piscina infinita y jardín privado.",
+      "description": "Ideal para estancias en familia o con amigos, la Villa Atlas View despliega 800 m² de jardines arbolados alrededor de una piscina infinita frente a las montañas del Atlas. Los espacios generosos, la cocina totalmente equipada y el salón de verano cubierto la convierten en un lugar perfecto para recibir invitados. Un chef privado y un equipo doméstico pueden ponerse a disposición bajo petición.",
+      "amenities": [
+        "Piscina infinita",
+        "Jardín privado de 800 m²",
+        "Chef privado bajo petición",
+        "Gimnasio",
+        "Aire acondicionado",
+        "Wifi de alta velocidad",
+        "Aparcamiento privado",
+        "Seguridad 24h"
+      ]
+    },
+    "villa-palmeraie-dune": {
+      "categoryLabel": "Villa con piscina",
+      "location": "Palmeraie de Marrakech",
+      "shortDescription": "Villa de diseño en pleno corazón de la Palmeraie, ambiente zen, piscina climatizada y zona de bienestar.",
+      "description": "Rodeada de palmeras centenarias, la Villa Palmeraie Dune ofrece una arquitectura depurada que combina hormigón pulido, madera bruta y grandes ventanales. La zona de bienestar con sauna y sala de masajes, así como la piscina climatizada todo el año, la convierten en una dirección muy solicitada para estancias reparadoras.",
+      "amenities": [
+        "Piscina climatizada",
+        "Sauna y sala de masajes",
+        "Cocina equipada",
+        "Aire acondicionado",
+        "Wifi de alta velocidad",
+        "Aparcacoches"
+      ]
+    },
+    "appartement-gueliz-loft": {
+      "categoryLabel": "Apartamento moderno",
+      "location": "Guéliz, ciudad nueva",
+      "shortDescription": "Loft moderno en pleno corazón de Guéliz, cerca de restaurantes y tiendas, terraza con vistas a la ciudad.",
+      "description": "Situado en el animado barrio de Guéliz, este apartamento tipo loft combina diseño contemporáneo y funcionalidad. Muy cerca de las mejores direcciones gastronómicas y tiendas de Marrakech, constituye una base ideal para explorar tanto la ciudad nueva como la medina, accesible en pocos minutos.",
+      "amenities": [
+        "Terraza con vistas",
+        "Aire acondicionado",
+        "Wifi de alta velocidad",
+        "Cocina equipada",
+        "Aparcamiento seguro",
+        "Gimnasio del edificio"
+      ]
+    },
+    "appartement-medina-suite": {
+      "categoryLabel": "Apartamento moderno",
+      "location": "Medina, cerca de la Koutoubia",
+      "shortDescription": "Suite refinada a pocos pasos de la Koutoubia, ideal para una estancia romántica o en solitario.",
+      "description": "Esta luminosa suite combina el encanto de la medina con un confort resueltamente contemporáneo. Su ubicación, a pocos minutos a pie de la mezquita Koutoubia y de la plaza Jemaa el-Fna, la convierte en un pied-à-terre de elección para descubrir Marrakech a pie, disfrutando de un interior acogedor y silencioso.",
+      "amenities": [
+        "Aire acondicionado",
+        "Wifi de alta velocidad",
+        "Kitchenette equipada",
+        "Desayuno bajo petición",
+        "Conserjería"
+      ]
+    }
+  },
+  "testimonials": {
+    "t1": {
+      "origin": "Francia",
+      "text": "Una estancia absolutamente perfecta en el Riad Al Manar. El equipo organizó nuestro traslado y cada detalle de nuestra estancia. Todo fluyó de principio a fin."
+    },
+    "t2": {
+      "origin": "Italia",
+      "text": "La Villa Atlas View supera todas las fotos. Piscina magnífica, personal muy atento: uno de los mejores recuerdos de nuestro viaje a Marruecos."
+    },
+    "t3": {
+      "origin": "Emiratos Árabes Unidos",
+      "text": "Reserva sencilla, comunicación rápida en inglés. El riad tenía un refinamiento increíble, lo recomiendo sin dudarlo."
+    },
+    "t4": {
+      "origin": "Bélgica",
+      "text": "Excelente relación calidad-precio para el apartamento en Guéliz, muy bien ubicado, ideal para descubrir Marrakech en familia."
+    },
+    "t5": {
+      "origin": "Catar",
+      "text": "Un nivel de servicio digno de los mejores palacios. El mayordomo y el chef privado hicieron inolvidable nuestra reunión familiar, cada detalle estaba pensado."
+    },
+    "t6": {
+      "origin": "Suiza",
+      "text": "La villa fue un remanso de paz: sauna, masajes, piscina climatizada toda la semana. Exactamente el descanso que necesitábamos."
+    },
+    "t7": {
+      "origin": "Canadá",
+      "text": "Suite luminosa, muy bien ubicada a pocos pasos de la Koutoubia. Comunicación impecable antes y durante la estancia, lo recomendamos sin dudarlo."
+    },
+    "t8": {
+      "origin": "Francia",
+      "text": "Éramos 14 para un cumpleaños familiar: el Palais Riyad El Fassia se encargó del alojamiento, las comidas e incluso las actividades in situ. Un profesionalismo notable de principio a fin."
+    },
+    "t9": {
+      "origin": "Marruecos",
+      "text": "Como viajero de negocios habitual en Marrakech, aprecio la capacidad de respuesta del equipo y la constancia del servicio en cada estancia en el apartamento de Guéliz."
+    },
+    "t10": {
+      "origin": "Italia",
+      "text": "Una escapada entre amigas muy exitosa en la Villa Atlas View. La vista del Atlas durante el desayuno será un recuerdo memorable. Un pequeño contratiempo con el wifi, resuelto rápidamente por el equipo local."
+    }
+  },
+  "faqs": {
+    "f1": {
+      "question": "¿Cómo reservar un riad, un palacio, una villa o un apartamento?",
+      "answer": "Puede reservar directamente a través del formulario de contacto del sitio, por WhatsApp o por teléfono. Confirmamos la disponibilidad en 24h y le enviamos un presupuesto detallado antes de cualquier solicitud de depósito."
+    },
+    "f2": {
+      "question": "¿Está incluido el traslado desde el aeropuerto?",
+      "answer": "El traslado desde el aeropuerto está incluido en la mayoría de nuestros riads, palacios y villas. Puede añadirse como opción para nuestros apartamentos bajo petición."
+    },
+    "f3": {
+      "question": "¿Cuáles son los horarios de llegada y salida?",
+      "answer": "La llegada generalmente es a partir de las 15h y la salida antes del mediodía. Se pueden organizar llegadas anticipadas o salidas tardías según la disponibilidad del alojamiento."
+    },
+    "f4": {
+      "question": "¿Están incluidos el desayuno y la limpieza?",
+      "answer": "Depende del alojamiento: la mayoría de nuestros riads y palacios incluyen el desayuno y un servicio de limpieza diario. Consulte la ficha de cada propiedad para conocer el detalle exacto de los servicios incluidos."
+    },
+    "f5": {
+      "question": "¿Puedo cancelar o modificar mi reserva?",
+      "answer": "Las modificaciones son posibles hasta 48h antes de la fecha prevista, sujeto a disponibilidad. Consulte nuestras condiciones generales o contacte con nuestro equipo para cualquier solicitud específica."
+    }
+  }
+}

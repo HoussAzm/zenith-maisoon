@@ -11,7 +11,6 @@ export const siteConfig = {
     instagram: "https://instagram.com",
     facebook: "https://facebook.com",
   },
-  hours: "Disponible 7j/7 — 8h à 22h",
 } as const;
 
 export const whatsappLink = (message?: string) => {

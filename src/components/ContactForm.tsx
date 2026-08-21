@@ -1,27 +1,28 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { useState, type FormEvent } from "react";
 
-const serviceOptions = [
-  "Riad",
-  "Palais",
-  "Villa",
-  "Appartement",
-  "Je ne sais pas encore",
-];
-
-const serviceParamMap: Record<string, string> = {
-  hebergement: serviceOptions[0],
-};
-
 export default function ContactForm() {
+  const t = useTranslations("contactForm");
   const searchParams = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   const [sending, setSending] = useState(false);
 
-  const prefilledService = serviceParamMap[searchParams.get("service") ?? ""] ?? serviceOptions[0];
+  const serviceOptions = [
+    { value: t("serviceOptions.riad"), label: t("serviceOptions.riad") },
+    { value: t("serviceOptions.palais"), label: t("serviceOptions.palais") },
+    { value: t("serviceOptions.villa"), label: t("serviceOptions.villa") },
+    { value: t("serviceOptions.appartement"), label: t("serviceOptions.appartement") },
+    { value: t("serviceOptions.unknown"), label: t("serviceOptions.unknown") },
+  ];
+
+  const prefilledService =
+    searchParams.get("service") === "hebergement"
+      ? serviceOptions[0].value
+      : serviceOptions[0].value;
   const prefilledDates = searchParams.get("dates") ?? "";
   const prefilledGuests = searchParams.get("guests");
 
@@ -34,7 +35,7 @@ export default function ContactForm() {
     const message = String(data.get("message") ?? "").trim();
 
     if (!name || !email || !message) {
-      setError("Merci de remplir tous les champs obligatoires.");
+      setError(t("errorRequired"));
       return;
     }
     setError("");
@@ -56,13 +57,13 @@ export default function ContactForm() {
 
       if (!res.ok) {
         const result = await res.json().catch(() => null);
-        throw new Error(result?.error ?? "Une erreur est survenue.");
+        throw new Error(result?.error ?? t("errorSend"));
       }
 
       setSubmitted(true);
       form.reset();
     } catch {
-      setError("L'envoi a échoué. Merci de réessayer ou de nous écrire sur WhatsApp.");
+      setError(t("errorSend"));
     } finally {
       setSending(false);
     }
@@ -73,7 +74,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink-800">
-            Nom complet *
+            {t("nameLabel")}
           </label>
           <input
             id="name"
@@ -81,12 +82,12 @@ export default function ContactForm() {
             type="text"
             required
             className="w-full rounded-xl border border-ink-100 bg-sand-50 px-4 py-3 text-sm text-ink-900 outline-none transition focus:border-clay-500 focus:ring-1 focus:ring-clay-500"
-            placeholder="Votre nom"
+            placeholder={t("namePlaceholder")}
           />
         </div>
         <div>
           <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-ink-800">
-            Email *
+            {t("emailLabel")}
           </label>
           <input
             id="email"
@@ -94,7 +95,7 @@ export default function ContactForm() {
             type="email"
             required
             className="w-full rounded-xl border border-ink-100 bg-sand-50 px-4 py-3 text-sm text-ink-900 outline-none transition focus:border-clay-500 focus:ring-1 focus:ring-clay-500"
-            placeholder="vous@email.com"
+            placeholder={t("emailPlaceholder")}
           />
         </div>
       </div>
@@ -102,19 +103,19 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-ink-800">
-            Téléphone / WhatsApp
+            {t("phoneLabel")}
           </label>
           <input
             id="phone"
             name="phone"
             type="tel"
             className="w-full rounded-xl border border-ink-100 bg-sand-50 px-4 py-3 text-sm text-ink-900 outline-none transition focus:border-clay-500 focus:ring-1 focus:ring-clay-500"
-            placeholder="+212 ..."
+            placeholder={t("phonePlaceholder")}
           />
         </div>
         <div>
           <label htmlFor="dates" className="mb-1.5 block text-sm font-medium text-ink-800">
-            Dates envisagées
+            {t("datesLabel")}
           </label>
           <input
             id="dates"
@@ -122,14 +123,14 @@ export default function ContactForm() {
             type="text"
             defaultValue={prefilledDates}
             className="w-full rounded-xl border border-ink-100 bg-sand-50 px-4 py-3 text-sm text-ink-900 outline-none transition focus:border-clay-500 focus:ring-1 focus:ring-clay-500"
-            placeholder="Ex : 12 au 18 septembre"
+            placeholder={t("datesPlaceholder")}
           />
         </div>
       </div>
 
       <div>
         <label htmlFor="service" className="mb-1.5 block text-sm font-medium text-ink-800">
-          Service souhaité
+          {t("serviceLabel")}
         </label>
         <select
           id="service"
@@ -138,8 +139,8 @@ export default function ContactForm() {
           defaultValue={prefilledService}
         >
           {serviceOptions.map((opt) => (
-            <option key={opt} value={opt}>
-              {opt}
+            <option key={opt.value} value={opt.value}>
+              {opt.label}
             </option>
           ))}
         </select>
@@ -147,24 +148,25 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-ink-800">
-          Message *
+          {t("messageLabel")}
         </label>
         <textarea
           id="message"
           name="message"
           required
           rows={5}
-          defaultValue={prefilledGuests ? `Nombre de personnes : ${prefilledGuests}\n` : undefined}
+          defaultValue={
+            prefilledGuests ? `${t("guestsCountPrefix")}${prefilledGuests}\n` : undefined
+          }
           className="w-full resize-none rounded-xl border border-ink-100 bg-sand-50 px-4 py-3 text-sm text-ink-900 outline-none transition focus:border-clay-500 focus:ring-1 focus:ring-clay-500"
-          placeholder="Décrivez votre projet de séjour, le nombre de personnes, vos envies d'activités..."
+          placeholder={t("messagePlaceholder")}
         />
       </div>
 
       {error && <p className="text-sm text-red-600">{error}</p>}
       {submitted && (
         <p className="rounded-xl bg-palm-500/10 px-4 py-3 text-sm text-palm-700">
-          Merci ! Votre demande a bien été envoyée, notre équipe vous répond sous 24h.
-          Vous pouvez aussi nous écrire directement sur WhatsApp pour une réponse plus rapide.
+          {t("successMessage")}
         </p>
       )}
 
@@ -173,7 +175,7 @@ export default function ContactForm() {
         disabled={sending}
         className="w-full rounded-full bg-ink-950 px-7 py-3.5 text-sm font-semibold text-sand-50 transition hover:bg-clay-600 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
-        {sending ? "Envoi en cours..." : "Envoyer la demande"}
+        {sending ? t("sending") : t("submit")}
       </button>
     </form>
   );

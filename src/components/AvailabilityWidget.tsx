@@ -1,12 +1,14 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useState, type FormEvent } from "react";
+import { useRouter } from "@/i18n/navigation";
 import DatePicker from "./DatePicker";
 
 const MAX_GUESTS = 15;
 
 export default function AvailabilityWidget() {
+  const t = useTranslations("availabilityWidget");
   const router = useRouter();
   const [guests, setGuests] = useState(2);
   const guestsError = guests > MAX_GUESTS;
@@ -21,7 +23,7 @@ export default function AvailabilityWidget() {
 
     const checkin = String(data.get("checkin") ?? "");
     const checkout = String(data.get("checkout") ?? "");
-    if (checkin && checkout) params.set("dates", `${checkin} au ${checkout}`);
+    if (checkin && checkout) params.set("dates", `${checkin}${t("dateRangeJoin")}${checkout}`);
     params.set("guests", String(guests));
 
     router.push(`/contact?${params.toString()}`);
@@ -34,12 +36,12 @@ export default function AvailabilityWidget() {
           onSubmit={handleSubmit}
           className="grid grid-cols-1 items-end gap-3 sm:grid-cols-[repeat(3,1fr)_auto] sm:gap-4"
         >
-          <DatePicker label="Arrivée" name="checkin" />
-          <DatePicker label="Départ" name="checkout" />
+          <DatePicker label={t("arrival")} name="checkin" />
+          <DatePicker label={t("departure")} name="checkout" />
           <div>
             <label className="block text-left">
               <span className="mb-1 block text-xs font-semibold uppercase tracking-wide text-ink-400">
-                Voyageurs
+                {t("travelers")}
               </span>
               <input
                 name="guests"
@@ -57,7 +59,7 @@ export default function AvailabilityWidget() {
               />
             </label>
             {guestsError && (
-              <p className="mt-1 text-xs font-medium text-red-600">Maximum 15 personnes</p>
+              <p className="mt-1 text-xs font-medium text-red-600">{t("maxGuestsError")}</p>
             )}
           </div>
 
@@ -66,7 +68,7 @@ export default function AvailabilityWidget() {
             className="rounded-xl bg-ink-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-clay-600 disabled:cursor-not-allowed disabled:opacity-50"
             disabled={guestsError}
           >
-            Vérifier la disponibilité
+            {t("checkAvailability")}
           </button>
         </form>
       </div>

@@ -1,43 +1,25 @@
-type CellValue = true | false | string;
+import { useTranslations } from "next-intl";
+import { siteConfig } from "@/lib/site-config";
 
-const rows: { label: string; us: CellValue; diy: CellValue; hotel: CellValue }[] = [
-  {
-    label: "Sélection de palais, riads, villas et appartements vérifiés",
-    us: true,
-    diy: "Qualité variable, difficile à vérifier",
-    hotel: false,
-  },
-  {
-    label: "Interlocuteur unique du début à la fin du séjour",
-    us: true,
-    diy: false,
-    hotel: "Seulement pour l'hôtel",
-  },
-  {
-    label: "Transfert aéroport inclus",
-    us: true,
-    diy: false,
-    hotel: "Souvent en supplément",
-  },
-  {
-    label: "Conciergerie et service de ménage inclus",
-    us: true,
-    diy: false,
-    hotel: true,
-  },
-  {
-    label: "Assistance locale 24/7, en français & anglais",
-    us: true,
-    diy: false,
-    hotel: "Variable selon l'établissement",
-  },
-  {
-    label: "Prix transparent, sans frais cachés",
-    us: true,
-    diy: "Frais de service variables",
-    hotel: "Taxes souvent en supplément",
-  },
-];
+type CellState = true | false | "text";
+
+const rowKeys = [
+  "selection",
+  "interlocutor",
+  "transfer",
+  "concierge",
+  "assistance",
+  "pricing",
+] as const;
+
+const rowConfig: Record<(typeof rowKeys)[number], { diy: CellState; hotel: CellState }> = {
+  selection: { diy: "text", hotel: false },
+  interlocutor: { diy: false, hotel: "text" },
+  transfer: { diy: false, hotel: "text" },
+  concierge: { diy: false, hotel: true },
+  assistance: { diy: false, hotel: "text" },
+  pricing: { diy: "text", hotel: "text" },
+};
 
 function Cell({ value }: { value: true | string | false }) {
   if (value === true) {
@@ -62,10 +44,12 @@ function Cell({ value }: { value: true | string | false }) {
 }
 
 export default function ComparisonTable() {
+  const t = useTranslations("comparisonTable");
+
   return (
     <div>
       <p className="mb-3 flex items-center gap-1.5 text-xs text-ink-400 sm:hidden">
-        Faites glisser pour comparer
+        {t("mobileHint")}
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={2} className="h-3.5 w-3.5">
           <path strokeLinecap="round" strokeLinejoin="round" d="M4 10h12m0 0l-4-4m4 4l-4 4" />
         </svg>
@@ -80,34 +64,37 @@ export default function ComparisonTable() {
                 </th>
                 <th className="bg-clay-500/5 px-4 py-4 sm:px-6 sm:py-5">
                   <span className="font-display text-sm font-bold text-clay-600 sm:text-base">
-                    Zénith Maison
+                    {siteConfig.name}
                   </span>
                 </th>
                 <th className="px-4 py-4 text-xs font-semibold text-ink-600 sm:px-6 sm:py-5 sm:text-sm">
-                  Vous-même (plusieurs sites)
+                  {t("diyHeader")}
                 </th>
                 <th className="px-4 py-4 text-xs font-semibold text-ink-600 sm:px-6 sm:py-5 sm:text-sm">
-                  Hôtel classique
+                  {t("hotelHeader")}
                 </th>
               </tr>
             </thead>
             <tbody>
-              {rows.map((row) => (
-                <tr key={row.label} className="border-b border-ink-100 last:border-0">
-                  <td className="sticky left-0 z-10 bg-white px-4 py-4 text-sm text-ink-800 sm:px-6">
-                    {row.label}
-                  </td>
-                  <td className="bg-clay-500/5 px-4 py-4 sm:px-6">
-                    <Cell value={row.us} />
-                  </td>
-                  <td className="px-4 py-4 sm:px-6">
-                    <Cell value={row.diy} />
-                  </td>
-                  <td className="px-4 py-4 sm:px-6">
-                    <Cell value={row.hotel} />
-                  </td>
-                </tr>
-              ))}
+              {rowKeys.map((key) => {
+                const config = rowConfig[key];
+                return (
+                  <tr key={key} className="border-b border-ink-100 last:border-0">
+                    <td className="sticky left-0 z-10 bg-white px-4 py-4 text-sm text-ink-800 sm:px-6">
+                      {t(`rows.${key}.label`)}
+                    </td>
+                    <td className="bg-clay-500/5 px-4 py-4 sm:px-6">
+                      <Cell value={true} />
+                    </td>
+                    <td className="px-4 py-4 sm:px-6">
+                      <Cell value={config.diy === "text" ? t(`rows.${key}.diy`) : config.diy} />
+                    </td>
+                    <td className="px-4 py-4 sm:px-6">
+                      <Cell value={config.hotel === "text" ? t(`rows.${key}.hotel`) : config.hotel} />
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

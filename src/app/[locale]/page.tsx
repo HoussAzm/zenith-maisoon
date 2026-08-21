@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
 import ServicesGrid from "@/components/ServicesGrid";
@@ -10,8 +11,10 @@ import AvailabilityWidget from "@/components/AvailabilityWidget";
 import ComparisonTable from "@/components/ComparisonTable";
 import FAQAccordion from "@/components/FAQAccordion";
 import { properties, testimonials, faqs } from "@/lib/data";
+import { siteConfig } from "@/lib/site-config";
 
-export default function Home() {
+export default async function Home() {
+  const t = await getTranslations("home");
   const featuredProperties = properties.filter((p) => p.featured).slice(0, 3);
   const displayProperties =
     featuredProperties.length >= 3 ? featuredProperties : properties.slice(0, 3);
@@ -19,23 +22,23 @@ export default function Home() {
   return (
     <>
       <Hero
-        eyebrow="Marrakech, Maroc"
-        title="Votre séjour de prestige à Marrakech, sans compromis"
-        description="Palais, riads et villas d'exception au cœur de Marrakech — une seule agence pour organiser l'intégralité de votre séjour."
+        eyebrow={t("hero.eyebrow")}
+        title={t("hero.title")}
+        description={t("hero.description")}
         image="/images/hero/hero-home.jpg"
-        imageLabel="Patio de riad traditionnel à Marrakech"
+        imageLabel={t("hero.imageLabel")}
         video="/videos/hero-luxury.mp4"
-        primaryCta={{ href: "/hebergements", label: "Découvrir nos hébergements" }}
-        secondaryCta={{ href: "/contact", label: "Demander un devis" }}
+        primaryCta={{ href: "/hebergements", label: t("hero.primaryCta") }}
+        secondaryCta={{ href: "/contact", label: t("hero.secondaryCta") }}
       />
 
       <AvailabilityWidget />
 
       <section className="mx-auto max-w-7xl px-5 pb-20 pt-24 sm:px-8 sm:pb-28 sm:pt-32">
         <SectionHeading
-          eyebrow="Nos catégories"
-          title="Trouvez votre type d'hébergement idéal"
-          description="Du palais royal à l'appartement moderne, une sélection pensée pour chaque style de séjour à Marrakech."
+          eyebrow={t("categories.eyebrow")}
+          title={t("categories.title")}
+          description={t("categories.description")}
         />
         <div className="mt-14">
           <ServicesGrid />
@@ -50,9 +53,9 @@ export default function Home() {
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
         <SectionHeading
-          eyebrow="Hébergements"
-          title="Nos adresses coup de cœur"
-          description="Une sélection de palais, riads, villas et appartements choisis pour leur emplacement, leur confort et leur service."
+          eyebrow={t("featured.eyebrow")}
+          title={t("featured.title")}
+          description={t("featured.description")}
         />
         <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {displayProperties.map((property) => (
@@ -64,16 +67,16 @@ export default function Home() {
             href="/hebergements"
             className="inline-block rounded-full border border-ink-900 px-7 py-3 text-sm font-semibold text-ink-900 transition hover:bg-ink-900 hover:text-sand-50"
           >
-            Voir tous les hébergements
+            {t("featured.viewAll")}
           </Link>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
         <SectionHeading
-          eyebrow="Pourquoi nous choisir"
-          title="Un seul interlocuteur, zéro complication"
-          description="Comparez ce que Zénith Maison vous fait gagner par rapport à une réservation faite vous-même ou à un hôtel classique."
+          eyebrow={t("why.eyebrow")}
+          title={t("why.title")}
+          description={t("why.description", { siteName: siteConfig.name })}
         />
         <div className="mt-14">
           <ComparisonTable />
@@ -83,16 +86,16 @@ export default function Home() {
       <section className="overflow-hidden bg-sand-100 py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
-            eyebrow="Témoignages"
-            title="Ce que disent nos clients"
-            description="Des séjours organisés avec soin, du premier contact au dernier jour."
+            eyebrow={t("testimonials.eyebrow")}
+            title={t("testimonials.title")}
+            description={t("testimonials.description")}
           />
         </div>
         <div className="relative mt-14">
           <div className="flex w-max animate-marquee gap-6 px-5 [animation-duration:55s] hover:[animation-play-state:paused] motion-reduce:animate-none sm:px-8">
-            {[...testimonials, ...testimonials].map((t, i) => (
-              <div key={`${t.name}-${i}`} className="w-[320px] shrink-0 sm:w-[360px]">
-                <TestimonialCard testimonial={t} />
+            {[...testimonials, ...testimonials].map((testimonial, i) => (
+              <div key={`${testimonial.id}-${i}`} className="w-[320px] shrink-0 sm:w-[360px]">
+                <TestimonialCard testimonial={testimonial} />
               </div>
             ))}
           </div>
@@ -102,7 +105,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-3xl px-5 py-20 sm:px-8 sm:py-28">
-        <SectionHeading eyebrow="Questions fréquentes" title="Tout ce qu'il faut savoir" />
+        <SectionHeading eyebrow={t("faq.eyebrow")} title={t("faq.title")} />
         <div className="mt-12">
           <FAQAccordion faqs={faqs} />
         </div>

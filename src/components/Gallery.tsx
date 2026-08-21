@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import ImageWithFallback from "./ImageWithFallback";
 
 export interface GalleryItem {
@@ -10,14 +11,17 @@ export interface GalleryItem {
 }
 
 export default function Gallery({ items }: { items: GalleryItem[] }) {
+  const t = useTranslations("gallery");
+  const tCategories = useTranslations("galleryPage.categories");
+  const ALL = tCategories("all");
   const categories = useMemo(
-    () => ["Tous", ...Array.from(new Set(items.map((i) => i.category)))],
-    [items]
+    () => [ALL, ...Array.from(new Set(items.map((i) => i.category)))],
+    [items, ALL]
   );
-  const [active, setActive] = useState("Tous");
+  const [active, setActive] = useState(ALL);
   const [lightbox, setLightbox] = useState<GalleryItem | null>(null);
 
-  const filtered = active === "Tous" ? items : items.filter((i) => i.category === active);
+  const filtered = active === ALL ? items : items.filter((i) => i.category === active);
 
   return (
     <div>
@@ -70,7 +74,7 @@ export default function Gallery({ items }: { items: GalleryItem[] }) {
         >
           <button
             type="button"
-            aria-label="Fermer"
+            aria-label={t("close")}
             onClick={() => setLightbox(null)}
             className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-sand-100/30 text-sand-50"
           >

@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-
-const WEEKDAYS = ["L", "M", "M", "J", "V", "S", "D"];
+import { useLocale, useTranslations } from "next-intl";
 
 function startOfDay(d: Date) {
   return new Date(d.getFullYear(), d.getMonth(), d.getDate());
@@ -15,8 +14,8 @@ function toISODate(d: Date) {
   return `${y}-${m}-${day}`;
 }
 
-function formatDisplay(d: Date) {
-  return new Intl.DateTimeFormat("fr-FR", {
+function formatDisplay(d: Date, intlLocale: string) {
+  return new Intl.DateTimeFormat(intlLocale, {
     day: "numeric",
     month: "short",
     year: "numeric",
@@ -49,6 +48,10 @@ export default function DatePicker({
   minDate?: Date;
   defaultValue?: Date;
 }) {
+  const t = useTranslations("datePicker");
+  const locale = useLocale();
+  const intlLocale = `${locale}-u-nu-latn`;
+  const weekdays = t.raw("weekdays") as string[];
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<Date | null>(defaultValue ?? null);
   const [viewMonth, setViewMonth] = useState(() => startOfDay(defaultValue ?? new Date()));
@@ -75,7 +78,7 @@ export default function DatePicker({
   }, [open]);
 
   const cells = buildMonthGrid(viewMonth);
-  const monthLabel = new Intl.DateTimeFormat("fr-FR", { month: "long", year: "numeric" }).format(
+  const monthLabel = new Intl.DateTimeFormat(intlLocale, { month: "long", year: "numeric" }).format(
     viewMonth
   );
 
@@ -92,7 +95,7 @@ export default function DatePicker({
         className="flex w-full items-center justify-between gap-2 rounded-xl border border-ink-100 bg-sand-50 px-3.5 py-2.5 text-left text-sm text-ink-900 outline-none transition focus:border-clay-500 focus:ring-1 focus:ring-clay-500"
       >
         <span className={selected ? "text-ink-900" : "text-ink-400"}>
-          {selected ? formatDisplay(selected) : "jj/mm/aaaa"}
+          {selected ? formatDisplay(selected, intlLocale) : t("placeholder")}
         </span>
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.6} className="h-4 w-4 shrink-0 text-ink-400">
           <rect x="3" y="4" width="14" height="13" rx="2" />
@@ -109,7 +112,7 @@ export default function DatePicker({
           <div className="mb-3 flex items-center justify-between">
             <button
               type="button"
-              aria-label="Mois précédent"
+              aria-label={t("prevMonth")}
               onClick={() => setViewMonth((m) => new Date(m.getFullYear(), m.getMonth() - 1, 1))}
               className="flex h-8 w-8 items-center justify-center rounded-full text-ink-600 transition hover:bg-sand-100"
             >
@@ -120,7 +123,7 @@ export default function DatePicker({
             <span className="font-display text-sm font-bold capitalize text-ink-900">{monthLabel}</span>
             <button
               type="button"
-              aria-label="Mois suivant"
+              aria-label={t("nextMonth")}
               onClick={() => setViewMonth((m) => new Date(m.getFullYear(), m.getMonth() + 1, 1))}
               className="flex h-8 w-8 items-center justify-center rounded-full text-ink-600 transition hover:bg-sand-100"
             >
@@ -131,7 +134,7 @@ export default function DatePicker({
           </div>
 
           <div className="grid grid-cols-7 gap-1 text-center text-[11px] font-semibold text-ink-400">
-            {WEEKDAYS.map((d, i) => (
+            {weekdays.map((d, i) => (
               <span key={`${d}-${i}`}>{d}</span>
             ))}
           </div>
