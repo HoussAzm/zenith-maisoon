@@ -45,7 +45,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="border-y border-ink-100 bg-sand-100 py-14 sm:py-16">
+      <section className="bg-ink-950 py-14 sm:py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <StatsBar />
         </div>
