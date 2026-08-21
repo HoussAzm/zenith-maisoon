@@ -41,8 +41,9 @@ export default function Navbar() {
           className="group absolute left-1/2 flex -translate-x-1/2 items-center gap-2 lg:static lg:left-auto lg:translate-x-0"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-full border border-clay-400/60 text-clay-300">
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
-              <path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z" />
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6.5 21V14C6.5 11 9 9.2 12 9.2C15 9.2 17.5 11 17.5 14V21" />
+              <path d="M12 1L13.07 3.93L16 5L13.07 6.07L12 9L10.93 6.07L8 5L10.93 3.93Z" fill="currentColor" stroke="none" />
             </svg>
           </span>
           <span className="font-display text-lg tracking-wide text-sand-50">
