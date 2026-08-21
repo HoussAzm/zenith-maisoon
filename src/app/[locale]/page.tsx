@@ -27,7 +27,6 @@ export default async function Home() {
         description={t("hero.description")}
         image="/images/hero/hero-home.jpg"
         imageLabel={t("hero.imageLabel")}
-        video="/videos/hero-luxury.mp4"
         primaryCta={{ href: "/hebergements", label: t("hero.primaryCta") }}
         secondaryCta={{ href: "/contact", label: t("hero.secondaryCta") }}
       />
